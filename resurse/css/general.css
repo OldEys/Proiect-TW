@@ -1,3 +1,445 @@
-body{
-    background-color: #1c2739;
+* {
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+:root {
+    --culoare-navbar: #022737;
+    --culoare-deschisa: #0D1156;
+    --culoare-principala: #1B2638;
+    --culoare-inchisa: #031E1D;
+    --culoare-detalii: #6D50C7;
+    --culoare-gri: #2B313B;
+    --culoare-negru: #141d28;
+    --culoare-alb: #e9e9e9;
+    --spatiere-mare: 1.2rem;
+    --spatiere-medie: 1rem;
+    --spatiere-mica: 0.8rem;
+    --font-mare: 1rem;
+    --font-mediu: 0.8rem;
+    --font-mic: 0.7em;
+}
+
+body {
+    background-color: var(--culoare-principala);
+    color: var(--culoare-alb);
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin:1rem;
+}
+h3{
+    font-size:1.2rem;
+    font-weight: bold;
+    margin:1rem;
+}
+p{
+    font-size:1rem;
+    margin-bottom: 0.8em;
+}
+ul,ol{
+    margin:1rem;
+}
+main,
+footer {
+    margin-left: var(--spatiere-mare);
+    margin-right: var(--spatiere-mare);
+}
+
+main img,
+video {
+    width: 30%;
+    max-width: 1200px;
+    min-width: 300px;
+    height: 30%;
+}
+
+section {
+    scroll-margin-top: 150px;
+}
+
+.prezentare {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-image: url('../imagini/imagine_slider.jpg');
+    background-position: center;
+    background-size: cover;
+    box-shadow: 10px 15px 40px var(--culoare-deschisa);
+    grid-area: prezentare;
+}
+
+.wrapper {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: slider 24s ease-in-out infinite;
+    flex-wrap: nowrap;
+}
+
+.slide {
+    flex: 0 0 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+    box-sizing: border-box;
+    padding: 0 5%;
+}
+
+.slide strong {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.slide p {
+    font-size: 1.5rem;
+    margin-left: 30px;
+}
+
+.slide:nth-child(1) {
+    background-color: transparent;
+}
+
+.slide:nth-child(2) {
+    background-color: transparent;
+}
+
+.slide:nth-child(3) {
+    background-color: transparent;
+}
+
+.slide:nth-child(4) {
+    background-color: transparent;
+}
+
+.slide:nth-child(5) {
+    background-color: transparent;
+}
+
+@keyframes slider {
+
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+
+    25%,
+    45% {
+        transform: translateX(-100vw);
+    }
+
+    50%,
+    70% {
+        transform: translateX(-200vw);
+    }
+
+    75%,
+    95% {
+        transform: translateX(-300vw);
+    }
+
+    100% {
+        transform: translateX(-400vw);
+    }
+}
+
+footer {
+    background-color: var(--culoare-inchisa);
+    padding: var(--spatiere-mare);
+}
+
+#grid-pagina {
+    margin-left: var(--spatiere-mare);
+    margin-right: var(--spatiere-mare);
+    display: grid;
+    grid-template-areas:
+        "prezentare prezentare prezentare prezentare"
+        "prezentare prezentare prezentare prezentare"
+        "tabel-grid tabel-grid grid-8 grid-8"
+        "grid-3 grid-6 grid-8 grid-8"
+        "grid-5 grid-6 grid-8 grid-8"
+        "grid-5 grid-4 grid-4 grid-7";
+    grid-gap: var(--spatiere-mare);
+    grid-template-columns:auto auto ;
+    caption-side: bottom;
+    font-size: var(--font-mare);
+    transition: font-size 0.3s linear;
+}
+
+#grid-pagina>div {
+    padding: 7px;
+    border: 2px var(--culoare-detalii) solid;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 0.5em 0.7em 0.3em var(--culoare-negru) ;
+}
+
+.tabel-grid {
+    grid-area: tabel-grid;
+}
+
+
+.grid-3 {
+    grid-area: grid-3;
+}
+
+.grid-4 {
+    grid-area: grid-4;
+}
+
+.grid-5 {
+    grid-area: grid-5;
+}
+
+.grid-6 {
+    grid-area: grid-6;
+}
+
+.grid-7 {
+    grid-area: grid-7;
+}
+
+.grid-8 {
+    grid-area: grid-8;
+    overflow: hidden;
+}
+
+
+table,
+td{
+    padding: 0px 10px 0px;
+    text-align: center;
+}
+
+table{
+    border: 5px var(--culoare-gri) solid;
+    border-radius: 5px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: var(--culoare-detalii);
+    height: 70px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--culoare-negru);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--culoare-inchisa);
+}
+
+
+tbody tr:hover {
+    background-color: var(--culoare-detalii);
+    transition: 0.7s ease-in;
+}
+td:hover{
+    background-color: var(--culoare-deschisa);
+    transition: 0.7s ease-out;
+
+}
+
+.container-iframe{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.container-iframe iframe{
+    border:3px var(--culoare-detalii) solid; 
+
+}
+.taburi-iframe{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.taburi-iframe a{
+    width: 25%;
+    height: 10vh;
+    background-color: var(--culoare-gri);
+    color:var(--culoare-alb);
+    text-decoration: none;
+    border-top-right-radius: 2vh;
+    border-bottom-right-radius: 2vh;
+    border:2px var(--culoare-detalii) solid;
+    text-align: center;
+    margin-top:1%;
+    transition:1s ease-out ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 0px;
+}
+.taburi-iframe a:hover{
+  width: 30%;
+  transition:1s ease-out;
+  background-color: var(--culoare-deschisa);
+}
+summary {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+details[open] p {
+    display: block;
+}
+summary .news-content h3::after {
+    content: "Citește mai mult";
+}
+
+details[open] summary .news-content h3::after {
+    content: "Citește mai puțin";
+}
+
+  .news-widget {
+    background: var(--culoare-negru);
+    padding: 1%;
+    box-shadow: 0px 4px 10px var(--culoare-inchisa);
+    max-width: 400px;
+    color: var(--culoare-alb);
+}
+
+.news-widget h2 {
+    text-align: center;
+    color: var(--culoare-detalii);
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    background: var(--culoare-gri);
+    margin: 0.5em 0;
+    padding: 0.8em;
+    border-radius: 5%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1em var(--culoare-detalii);
+}
+
+.news-content h3 {
+    font-size: 1rem;
+    margin: 0;
+    color:var(--culoare-detalii)
+}
+#Acasa h2{
+    display: flex;
+    text-align: center;
+}
+math mn:first-of-type{
+    color:red;
+}
+math mn:nth-of-type(2){
+    color:green;
+}
+math mn:nth-of-type(3){
+    color:yellow;
+}
+math mn:nth-of-type(4){
+    color:purple;
+}
+math mn:nth-of-type(5){
+    color:aquamarine;
+}
+math mo{
+    font-style: italic;
+}
+@media screen and (max-width: 1024px) {
+
+    main,
+    footer {
+        margin-left: var(--spatiere-medie);
+        margin-right: var(--spatiere-medie);
+        padding: var(--spatiere-medie);
+    }
+
+    main img,
+    video {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    #grid-pagina {
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "prezentare prezentare"
+            "tabel-grid grid-8"
+            "grid-3 grid-8"
+            "grid-5 grid-6"
+            "grid-4 grid-7";
+        grid-gap: var(--spatiere-medie);
+        font-size: var(--font-mediu);
+        transition: font-size 0.3s linear;
+    }
+    .tabel-grid{
+        overflow-x: scroll;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    main,
+    footer {
+        margin-left: var(--spatiere-mica);
+        margin-right: var(--spatiere-mica);
+        padding: var(--spatiere-mica);
+    }
+
+    main img,
+    video {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    #grid-pagina {
+        display: block;
+        grid-gap: var(--spatiere-mica);
+        font-size: var(--font-mic);
+        font-size: var(--font-mic);
+        transition: font-size 0.3s linear;
+    }
+    .tabel-grid{
+        overflow-x:auto;   
+    }
+
 }
