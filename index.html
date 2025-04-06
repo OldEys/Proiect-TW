@@ -6,6 +6,7 @@
         <meta name="author" content="Babii Victor">
         <meta name="keywords" content="RocketPCs,PC,calculator,build PC,periferice,gaming,office,programare,componente PC,piese PC,PC ansamblat,high FPS PC">
         <meta name="description" content="Pe RocketPCs gasesti cele mai bune build-uri de PC din Romania de la cele mai accesibile pana la cele mai performante . Ai o gama larga de optiuni in functie de gusturile tale precum si periferice sau componente pentru a-ti construi calculator visurilor tale.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link
             rel="icon"
             type="image/png"
@@ -31,173 +32,211 @@
     </head>
     <body>
         <header>
+            <p class="watermark"></p>
             <div class="menu-bar">
-                <div class="antet">
-                    <div class="logo">
-                        <a href="#Acasa">
-                            <img
-                                src="./resurse/imagini/Logo_fara_main_page.png"
-                                alt="Poza Logo"
-                                width="60px"
-                                height="60px"
-                            >
-                        </a>
-                        <h1 class="logo-text">
-                            Rocket
-                            <span>PC</span>s.
-                        </h1>
+                <div class="header-container">
+                    <div class="antet">
+                        <div class="logo">
+                            <a href="#Acasa">
+                                <img src="./resurse/imagini/Logo_fara_main_page.png" alt="Poza Logo">
+                            </a>
+                            <h1 class="logo-text">
+                                Rocket
+                                <span>PC</span>s.
+                            </h1>
+                        </div>
+                        <q>
+                            <i>
+                                Noi construim
+                                <b>puterea</b>
+                                . Tu o
+                                <b>controlezi</b>
+                                .
+                            </i>
+                        </q>
                     </div>
-                    <q>
-                        <i>
-                            Noi construim
-                            <b>puterea</b>
-                            . Tu o
-                            <b>controlezi</b>
-                            .
-                        </i>
-                    </q>
+                    <label for="ch-menu">
+                        <div class="hamburger">
+                            <div class="bara-1"></div>
+                            <div class="bara-2"></div>
+                            <div class="bara-3"></div>
+                        </div>
+                    </label>
                 </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Acasă
-                                <i class="fas fa-caret-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li>
-                                        <a href="#Introducere">Introducere</a>
-                                    </li>
-                                    <li>
-                                        <a href="#Despre_noi">Despre noi</a>
-                                    </li>
-                                    <li>
-                                        <a href="#FAQ">FAQ</a>
-                                    </li>
-                                    <li>
-                                        <a href="#Termeni">Termeni și condiții</a>
-                                    </li>
-                                    <li>
-                                        <a href="#Ghid">Ghid utilizare site</a>
-                                    </li>
-                                    <li>
-                                        <a href="#Tutoriale">Tutoriale și linkuri utile</a>
-                                    </li>
-                                    <li>
-                                        <a href="#Contact">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Build-uri PC
-                                <i class="fas fa-caret-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li>
-                                        <a href="#">PC gaming</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">PC office</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Server PC</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">PC all-in-one</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">PC streaming și randare</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Periferice și accesorii
-                                <i class="fas fa-caret-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            Periferice
-                                            <i class="fas fa-caret-right"></i>
-                                        </a>
-                                        <div class="dropdown-menu-1">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Monitoare</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Mouse-uri</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Tastaturi</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Căști</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Boxe</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Microfoane</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Camere video</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Imprimante</a>
-                                                </li>
-                                            </ul>
+                <input type="checkbox" id="ch-menu">
+                <section class="wipe-container">
+                    <div class="wipe-1"></div>
+                    <div class="wipe-2">
+
+                    <nav >
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="imag-icon">
+                                        <i class="fas fa-regular fa-house"></i>
+                                    </div>
+                                    <div class="text-icon">
+                                        <span class="fas fa-regular fa-house"></span>
+                                        <div class="container-acasa">
+                                            Acasă
+                                            <i class="fas fa-caret-down"></i>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Accesorii
-                                            <i class="fas fa-caret-right"></i>
-                                        </a>
-                                        <div class="dropdown-menu-1">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Mouse pad-uri</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Stick-uri USB</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Scaune de gaming</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Suport de căști</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">Cont</a>
-                        </li>
-                        <li>
-                            <a href="#">Coș curent</a>
-                        </li>
-                    </ul>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="#Introducere">Introducere</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Despre_noi">Despre noi</a>
+                                        </li>
+                                        <li>
+                                            <a href="#FAQ">FAQ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Termeni">Termeni și condiții</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Ghid">Ghid utilizare site</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Tutoriale">Tutoriale și linkuri utile</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Contact">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="imag-icon">
+                                        <i class="fa-solid fa-desktop"></i>
+                                    </div>
+                                    <div class="text-icon">
+                                        Build-uri PC
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="#">PC gaming</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">PC office</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Server PC</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">PC all-in-one</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">PC streaming și randare</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="imag-icon">
+                                        <i class="fa-solid fa-keyboard"></i>
+                                    </div>
+                                    <div class="text-icon">
+                                        Periferice și accesorii
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                Periferice
+                                                <i class="fas fa-caret-right"></i>
+                                            </a>
+                                            <div class="dropdown-menu-1">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">Monitoare</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Mouse-uri</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Tastaturi</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Căști</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Boxe</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Microfoane</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Imprimante</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Accesorii
+                                                <i class="fas fa-caret-right"></i>
+                                            </a>
+                                            <div class="dropdown-menu-1">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">Mouse pad-uri</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Stick-uri USB</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Scaune de gaming</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Suport de căști</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="imag-icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+                                    <div class="text-icon">
+                                        Cont
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="imag-icon">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+                                    <div class="text-icon">
+                                        Coș curent
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
                 </nav>
+            </div>
+            </section>
+
             </div>
             <div id="grid-pagina">
                 <div class="prezentare">
-                   <div class="wrapper">
-                        <!-- <img src="./resurse/imagini/PC_genesis_mov.webp" alt="pc1">
-                    <img src="./resurse/imagini/PC_aquiris_large.jpg" alt="pc2">
-                    <img src="./resurse/imagini/PC_rog_strix.avif" alt="pc3">
-                    <img src="./resurse/imagini/PC_curcubeu.webp" alt="pc4">
-                    <img src="./resurse/imagini/PC_genesis_mov.webp" alt="pc1"> -->
+                    <div class="wrapper">
                         <div class="slide">
                             <strong>
                                 🖥️ CEL MAI BUN LOC PENTRU PC-URI PERFORMANTE!
@@ -251,99 +290,99 @@
                     </div>
                 </div>
                 <div class="tabel-grid">
-                        <table>
-                            <caption>Prezentarea unora dinre cele mai populare build-uri</caption>
-                            <thead>
-                                <tr>
-                                    <td>
-                                        <b>Nume</b>
-                                    </td>
-                                    <td>
-                                        <b>Procesor</b>
-                                    </td>
-                                    <td>
-                                        <b>RAM</b>
-                                    </td>
-                                    <td>
-                                        <b>Stocare</b>
-                                    </td>
-                                    <td>
-                                        <b>Placa video</b>
-                                    </td>
-                                    <td>
-                                        <b>Placa de baza</b>
-                                    </td>
-                                    <td>
-                                        <b>Sursa</b>
-                                    </td>
-                                    <td>
-                                        <b>Pret</b>
-                                    </td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>PC Rachetă Gaming Corsair</td>
-                                    <td>Intel Core i9-13900K</td>
-                                    <td>32GB DDR5 6000MHz</td>
-                                    <td>SSD NVMe 1TB</td>
-                                    <td>NVIDIA RTX 4080 16GB</td>
-                                    <td>ASUS ROG Strix Z690-E Gaming WiFi</td>
-                                    <td>RM1000x 1000W 80+ Gold</td>
-                                    <td>12.000 RON</td>
-                                </tr>
-                                <tr>
-                                    <td>PC OZN Office Guardian</td>
-                                    <td>AMD Ryzen 7 7700X</td>
-                                    <td>16GB DDR4 3600MHz</td>
-                                    <td>SSD NVMe 500GB</td>
-                                    <td>NVIDIA RTX 3070 8GB</td>
-                                    <td>MSI MAG B550 TOMAHAWK</td>
-                                    <td>EVGA SuperNOVA 750W 80+ Gold</td>
-                                    <td>6.500 RON</td>
-                                </tr>
-                                <tr>
-                                    <td>PC Satelit Budget Hero</td>
-                                    <td>Intel Core i5-13600K</td>
-                                    <td>16GB DDR4 3200MHz</td>
-                                    <td>SSD 512GB + HDD 2TB</td>
-                                    <td>Intel UHD 770</td>
-                                    <td>ASUS Prime Z690-A</td>
-                                    <td>Cooler Master MWE Bronze 650W</td>
-                                    <td>3.200 RON</td>
-                                </tr>
-                                <tr>
-                                    <td>PC Rachetă Rendering Beast ROG</td>
-                                    <td>AMD Ryzen 9 7900X</td>
-                                    <td>64GB DDR5 5600MHz</td>
-                                    <td>SSD NVMe 2TB</td>
-                                    <td>NVIDIA RTX 4090 24GB</td>
-                                    <td>MSI MEG X670E ACE</td>
-                                    <td>PRIME 850W 80+ Platinum</td>
-                                    <td>17.500 RON</td>
-                                </tr>
-                                <tr>
-                                    <td>PC Satelit Gaming Fantasy</td>
-                                    <td>Intel Core i5-12400F</td>
-                                    <td>8GB DDR4 3200MHz</td>
-                                    <td>SSD 500GB</td>
-                                    <td>AMD Radeon RX 6600 XT 8GB</td>
-                                    <td>Gigabyte B660M DS3H</td>
-                                    <td>Cooler Master MWE Bronze 550W</td>
-                                    <td>3.800 RON</td>
-                                </tr>
-                                <tr>
-                                    <td>PC Satelit Novice League Aquiris</td>
-                                    <td>AMD Ryzen 5 5600G</td>
-                                    <td>8GB DDR4 2666MHz</td>
-                                    <td>SSD 240GB</td>
-                                    <td>Integrated Vega 7</td>
-                                    <td>MSI A520M-A Pro</td>
-                                    <td>Thermaltake Smart 500W</td>
-                                    <td>2.300 RON</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <table>
+                        <caption>Prezentarea unora dinre cele mai populare build-uri</caption>
+                        <thead>
+                            <tr>
+                                <td>
+                                    <b>Nume</b>
+                                </td>
+                                <td>
+                                    <b>Procesor</b>
+                                </td>
+                                <td>
+                                    <b>RAM</b>
+                                </td>
+                                <td>
+                                    <b>Stocare</b>
+                                </td>
+                                <td>
+                                    <b>Placa video</b>
+                                </td>
+                                <td>
+                                    <b>Placa de baza</b>
+                                </td>
+                                <td>
+                                    <b>Sursa</b>
+                                </td>
+                                <td>
+                                    <b>Pret</b>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PC Rachetă Gaming Corsair</td>
+                                <td>Intel Core i9-13900K</td>
+                                <td>32GB DDR5 6000MHz</td>
+                                <td>SSD NVMe 1TB</td>
+                                <td>NVIDIA RTX 4080 16GB</td>
+                                <td>ASUS ROG Strix Z690-E Gaming WiFi</td>
+                                <td>RM1000x 1000W 80+ Gold</td>
+                                <td>12.000 RON</td>
+                            </tr>
+                            <tr>
+                                <td>PC OZN Office Guardian</td>
+                                <td>AMD Ryzen 7 7700X</td>
+                                <td>16GB DDR4 3600MHz</td>
+                                <td>SSD NVMe 500GB</td>
+                                <td>NVIDIA RTX 3070 8GB</td>
+                                <td>MSI MAG B550 TOMAHAWK</td>
+                                <td>EVGA SuperNOVA 750W 80+ Gold</td>
+                                <td>6.500 RON</td>
+                            </tr>
+                            <tr>
+                                <td>PC Satelit Budget Hero</td>
+                                <td>Intel Core i5-13600K</td>
+                                <td>16GB DDR4 3200MHz</td>
+                                <td>SSD 512GB + HDD 2TB</td>
+                                <td>Intel UHD 770</td>
+                                <td>ASUS Prime Z690-A</td>
+                                <td>Cooler Master MWE Bronze 650W</td>
+                                <td>3.200 RON</td>
+                            </tr>
+                            <tr>
+                                <td>PC Rachetă Rendering Beast ROG</td>
+                                <td>AMD Ryzen 9 7900X</td>
+                                <td>64GB DDR5 5600MHz</td>
+                                <td>SSD NVMe 2TB</td>
+                                <td>NVIDIA RTX 4090 24GB</td>
+                                <td>MSI MEG X670E ACE</td>
+                                <td>PRIME 850W 80+ Platinum</td>
+                                <td>17.500 RON</td>
+                            </tr>
+                            <tr>
+                                <td>PC Satelit Gaming Fantasy</td>
+                                <td>Intel Core i5-12400F</td>
+                                <td>8GB DDR4 3200MHz</td>
+                                <td>SSD 500GB</td>
+                                <td>AMD Radeon RX 6600 XT 8GB</td>
+                                <td>Gigabyte B660M DS3H</td>
+                                <td>Cooler Master MWE Bronze 550W</td>
+                                <td>3.800 RON</td>
+                            </tr>
+                            <tr>
+                                <td>PC Satelit Novice League Aquiris</td>
+                                <td>AMD Ryzen 5 5600G</td>
+                                <td>8GB DDR4 2666MHz</td>
+                                <td>SSD 240GB</td>
+                                <td>Integrated Vega 7</td>
+                                <td>MSI A520M-A Pro</td>
+                                <td>Thermaltake Smart 500W</td>
+                                <td>2.300 RON</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="grid-3" style>
                     <p>
@@ -352,7 +391,7 @@
                              possimus rerum animi dignissimos veritatis eaque, iure nihil excepturi mollitia dolore?
                     </p>
                 </div>
-                <div class="grid-4" >
+                <div class="grid-4">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Praesentium nulla ipsa modi aperiam. Omnis ipsa vel possimus
@@ -361,23 +400,32 @@
                         veniam commodi modi quia!
                     </p>
                 </div>
-                <div class="grid-5" >
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, laborum, deleniti unde optio impedit vel illum 
-                        dignissimos atque neque nesciunt culpa similique, delectus odit facere asperiores reprehenderit ut libero quos?</p>
+                <div class="grid-5">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, laborum, deleniti unde optio impedit vel illum 
+                        dignissimos atque neque nesciunt culpa similique, delectus odit facere asperiores reprehenderit ut libero quos?
+                    </p>
                 </div>
-                <div class="grid-6" >
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam 
+                <div class="grid-6">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam 
                         eum eius ea voluptatibus? Molestiae suscipit possimus dolor sunt temporibus ea tenetur dolorum. 
-                        Ratione consequuntur nesciunt totam? Ad molestias voluptatibus sint!</p>
+                        Ratione consequuntur nesciunt totam? Ad molestias voluptatibus sint!
+                    </p>
                 </div>
-                <div class="grid-7" >
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <div class="grid-7">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Suscipit ipsam minus reprehenderit repellendus laborum possimus obcaecati provident asperiores,
-                        quasi libero itaque laudantium ea saepe excepturi quidem enim, sit ex ipsum?</p>
+                        quasi libero itaque laudantium ea saepe excepturi quidem enim, sit ex ipsum?
+                    </p>
                 </div>
-                <div class="grid-8" >
+                <div class="grid-8">
                     <div class="news-widget">
-                        <h2><i class="fa-solid fa-newspaper fa-beat"></i> Ultimele Știri</h2>
+                        <h2>
+                            <i class="fa-solid fa-newspaper fa-beat"></i>
+                            Ultimele Știri
+                        </h2>
                         <div class="news-item">
                             <h3>RTX 5090 Leak - Ce specificații așteptăm?</h3>
                             <details>
@@ -386,9 +434,11 @@
                                         <h3></h3>
                                     </div>
                                 </summary>
-                                <p>Surse confirmă că noua placă video NVIDIA RTX 5090 ar putea ajunge cu o performanță semnificativ
+                                <p>
+                                    Surse confirmă că noua placă video NVIDIA RTX 5090 ar putea ajunge cu o performanță semnificativ
                                    mai mare decât predecesoarele sale. Placa ar putea fi echipată cu 24 GB de memorie GDDR7
-                                   și un TDP de 450W. Rămâne de văzut cum se va comporta în teste reale comparativ cu rivalul său AMD RX 8000.</p>
+                                   și un TDP de 450W. Rămâne de văzut cum se va comporta în teste reale comparativ cu rivalul său AMD RX 8000.
+                                </p>
                             </details>
                         </div>
                         <div class="news-item">
@@ -399,44 +449,38 @@
                                         <h3></h3>
                                     </div>
                                 </summary>
-                                <p>În acest articol, comparăm cele mai noi procesoare de la AMD și Intel, precum AMD Ryzen 8000 și 
+                                <p>
+                                    În acest articol, comparăm cele mai noi procesoare de la AMD și Intel, precum AMD Ryzen 8000 și 
                                   Intel Core i9-14000, analizând performanțele lor în gaming, multitasking și aplicații profesionale.
-                                   De asemenea, discutăm despre avantajele și dezavantajele fiecărei platforme pentru utilizatorii din 2025.</p>
+                                   De asemenea, discutăm despre avantajele și dezavantajele fiecărei platforme pentru utilizatorii din 2025.
+                                </p>
                             </details>
                         </div>
                         <div class="news-item">
-                          <h3>NVIDIA DLSS 3.0 - Cum îmbunătățește performanța în jocuri?</h3>
-                          <details>
-                              <summary>
-                                  <div class="news-content">
-                                      <h3></h3>
-                                  </div>
-                              </summary>
-                              <p>DLSS 3.0 a fost un salt major în tehnologia NVIDIA, oferind o performanță îmbunătățită semnificativ în jocurile
+                            <h3>NVIDIA DLSS 3.0 - Cum îmbunătățește performanța în jocuri?</h3>
+                            <details>
+                                <summary>
+                                    <div class="news-content">
+                                        <h3></h3>
+                                    </div>
+                                </summary>
+                                <p>
+                                    DLSS 3.0 a fost un salt major în tehnologia NVIDIA, oferind o performanță îmbunătățită semnificativ în jocurile
                                  cu suport pentru această tehnologie. În acest articol, discutăm despre modul în care DLSS 3.0 folosește Inteligența
-                                  Artificială pentru a crește rata de cadre în jocuri, fără a sacrifica calitatea imaginii.</p>
-                          </details>
-                      </div>
-                      <!-- <div class="news-item">
-                        <h3>Cel mai nou mouse gaming de la Logitech - G502 X Lightspeed</h3>
-                        <details>
-                            <summary>
-                                <div class="news-content">
-                                    <h3></h3>
-                                </div>
-                            </summary>
-                            <p>Logitech a lansat mouse-ul G502 X Lightspeed, care promite să revoluționeze experiența de gaming 
-                              cu tehnologia Lightspeed wireless. Cu un senzor HERO de 25K DPI și comutatoare mecanice, acest mouse
-                              oferă performanță și viteză extrem de ridicată, fiind ideal pentru jucătorii profesioniști și amatorii care își doresc un control precis.</p>
-                        </details>
-                    </div>-->
+                                  Artificială pentru a crește rata de cadre în jocuri, fără a sacrifica calitatea imaginii.
+                                </p>
+                            </details>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
         <main>
             <section id="Acasa">
-                <h2>Acasă<span class="fas fa-regular fa-house"></span></h2>
+                <h2>
+                    Acasă
+                    <span class="fas fa-regular fa-house"></span>
+                </h2>
                 <section>
                     <h3 id="Introducere">Introducere</h3>
                     <p>
@@ -466,8 +510,8 @@
                     </p>
                     <figure>
                         <picture>
-                            <source srcset="./resurse/imagini/PC_aquiris_large.jpg" media="(max-width: 1024px)">
                             <source srcset="./resurse/imagini/PC_aquiris_medium.jpg" media="(max-width: 768px)">
+                            <source srcset="./resurse/imagini/PC_aquiris_large.jpg" media="(max-width: 1024px)">
                             <img
                                 src="./resurse/imagini/PC_aquiris_small.jpg"
                                 alt="PC aquiris"
@@ -647,7 +691,23 @@
                             <br>
                             Dacă avem un
                             <b>PC</b>
-                            care conține un <b style="color:red">procesor</b> ,<b style="color:green"> GPU</b> , <b style="color:yellow">RAM</b> , <b style="color:purple">storage</b> cu scorurile benchmark <b style="color:red">10000</b>,<b style="color:green">4500</b>,<b style="color:yellow">5000</b> respectiv <b style="color:purple">8000</b> atunci performanța
+                            care conține un
+                            <b style="color:red">procesor</b>
+                            ,
+                            <b style="color:green"> GPU</b>
+                            ,
+                            <b style="color:yellow">RAM</b>
+                            ,
+                            <b style="color:purple">storage</b>
+                            cu scorurile benchmark
+                            <b style="color:red">10000</b>
+                            ,
+                            <b style="color:green">4500</b>
+                            ,
+                            <b style="color:yellow">5000</b>
+                            respectiv
+                            <b style="color:purple">8000</b>
+                            atunci performanța
                             <b>calculatorului</b>
                             este de:
                         </p>
@@ -730,12 +790,12 @@
                     <b>PC asamblat</b>
                     corespunzător de la partenerii noștri de la NZXT .
                 </p>
-                <div>
+                <div class="container-pdf">
                     <embed
                         src="resurse/pdf-uri/PC_build_guide.pdf#toolbar=0&navpanes=0"
                         type="application/pdf"
-                        width="640"
-                        height="520"
+                        width="100%"
+                        height="100%"
                     >
                 </div>
                 <p>Nu poți vizualiza conținutul ? Ai mai jos un link prin care poți să descarci ghidul .</p>
@@ -747,6 +807,7 @@
         <hr>
     </div>
     <footer>
+        <p id="banner">Acesta este un proiect școlar!</p>
         <section id="Contact">
             <h3>Contact</h3>
             <address>
@@ -758,15 +819,17 @@
                     Adresa :
                     <a href="https://www.google.com/maps/place/Faculty+of+Mathematics+and+Computer+Science/@44.4354285,26.100051,19.52z/data=!4m6!3m5!1s0x40b1ff472f47f047:0x493984726f0235f9!8m2!3d44.4355355!4d26.0995867!16s%2Fg%2F1td63tdh?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">Sediul Rocket Pcs</a>
                 </p>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11395.537198916782!2d26.099586700000007!3d44.4355355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f47f047%3A0x493984726f0235f9!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83!5e0!3m2!1sro!2sro!4v1741190468001!5m2!1sro!2sro"
-                    width="600"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                <div class="container-maps">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11395.537198916782!2d26.099586700000007!3d44.4355355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f47f047%3A0x493984726f0235f9!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83!5e0!3m2!1sro!2sro!4v1741190468001!5m2!1sro!2sro"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
                 <p>
                     Email :
                     <a href="mailto:contact.rocketpcs@gmail.com">contact.rocketpcs@gmail.com</a>

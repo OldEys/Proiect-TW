@@ -64,6 +64,9 @@ p{
 ul,ol{
     margin:1rem;
 }
+p{
+    margin: 0.5rem;
+}
 main,
 footer {
     margin-left: var(--spatiere-mare);
@@ -76,6 +79,7 @@ video {
     max-width: 1200px;
     min-width: 300px;
     height: 30%;
+    margin: 0.5rem;
 }
 
 section {
@@ -84,7 +88,8 @@ section {
 
 .prezentare {
     width: 100%;
-    height: 100vh;
+    height: 95vh;
+    margin-top: 10vh;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -92,7 +97,6 @@ section {
     background-image: url('../imagini/imagine_slider.jpg');
     background-position: center;
     background-size: cover;
-    box-shadow: 10px 15px 40px var(--culoare-deschisa);
     grid-area: prezentare;
 }
 
@@ -114,39 +118,28 @@ section {
     font-weight: bold;
     color: white;
     box-sizing: border-box;
-    padding: 0 5%;
+
 }
 
 .slide strong {
     font-size: 3.5rem;
-    margin-bottom: 20px;
-    margin-left: 30px;
+    margin-bottom: 1em;
+    margin-left: 1rem;
+    margin-right: 2em;
+    padding-right: 1.5rem;
+    transition: font-size 0.3s ease-in;
+
 }
 
 .slide p {
     font-size: 1.5rem;
-    margin-left: 30px;
+    margin-left: 1.5rem;
+    padding-right: 2.5rem;
+    margin-right: 2.5rem;
+    transition: font-size 0.3s ease-in;
+
 }
 
-.slide:nth-child(1) {
-    background-color: transparent;
-}
-
-.slide:nth-child(2) {
-    background-color: transparent;
-}
-
-.slide:nth-child(3) {
-    background-color: transparent;
-}
-
-.slide:nth-child(4) {
-    background-color: transparent;
-}
-
-.slide:nth-child(5) {
-    background-color: transparent;
-}
 
 @keyframes slider {
 
@@ -178,6 +171,8 @@ section {
 footer {
     background-color: var(--culoare-inchisa);
     padding: var(--spatiere-mare);
+    border: .2em var(--culoare-gri) solid;
+    border-radius: 4%;
 }
 
 #grid-pagina {
@@ -385,6 +380,16 @@ math mn:nth-of-type(5){
 math mo{
     font-style: italic;
 }
+.container-pdf,.container-maps{
+    width: 50%;
+    height: 50vh;
+}
+#banner{
+    display: none;
+}
+.watermark{
+    display: none;
+}
 @media screen and (max-width: 1024px) {
 
     main,
@@ -399,7 +404,18 @@ math mo{
         width: 100%;
         max-width: 800px;
     }
-
+    
+    .slide strong {
+        font-size: 3rem;
+        margin-bottom: 0.5em;
+        margin-left: 0.5rem;
+    }
+    
+    .slide p {
+        font-size: 1.3rem;
+        margin-left: 1rem;
+    }
+    
     #grid-pagina {
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
@@ -414,6 +430,13 @@ math mo{
     }
     .tabel-grid{
         overflow-x: scroll;
+    }
+    .container-maps,.container-pdf{
+        width: 75%;
+    }
+    .prezentare{
+        margin-top: 10vh;
+        height: 95vh;
     }
 }
 @media screen and (max-width: 768px) {
@@ -430,7 +453,17 @@ math mo{
         width: 100%;
         max-width: 600px;
     }
-
+    .slide strong {
+        font-size: 2.5rem;
+        margin-bottom: 0.5em;
+        margin-left: 0.5rem;
+    }
+    
+    .slide p {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+    
     #grid-pagina {
         display: block;
         grid-gap: var(--spatiere-mica);
@@ -441,5 +474,131 @@ math mo{
     .tabel-grid{
         overflow-x:auto;   
     }
+    .container-maps,.container-pdf{
+        width: 100%;
+    }
 
+}
+@media print{
+    .link-top{
+        display: none;
+    }
+    .menu-bar{
+        position: static !important;
+		page-break-after: always ;
+		margin-top: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .wipe-container nav{
+        display: none;
+    }
+    .wipe-container{
+        display: none;
+        width: 0 !important;
+        height: 0 !important;
+    }
+    .antet q{
+        display: none;
+    }
+    .antet h1{
+        display: flex;
+        flex-direction: row;
+        font-size: calc(3.5 * var(--font-mare));
+        text-decoration: underline;
+    }
+    .antet img{
+        display: none;
+    }
+    .antet{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        
+    }
+    footer{
+        page-break-before: always;
+    }
+    #banner{
+        display: inline-flex;
+        position: absolute;
+        top: 0;
+        left: 10%;
+        width: 80%;
+        border: 0.2rem black dotted;
+        font-size:2rem;
+        justify-content: center;
+    }
+    .header-container{
+        width: 100%;
+    }
+    #grid-pagina{
+        position: static !important;
+        page-break-before: always !important;
+        display: block;
+    }
+    #grid-pagina>div{
+        page-break-inside: avoid;
+        box-shadow: none;
+    }
+    a{
+        text-decoration: none;
+        color:unset;
+    }
+    .tabel-grid{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-shrink: 0.5;
+        
+    }
+    table{
+        padding: 0;
+        margin: 0;
+        justify-self: start;
+        border: none;
+    }
+    td{
+        font-size: var(--font-mediu);
+    }
+    .prezentare{
+    height: 85vh;
+    }
+    .container-maps,.container-iframe,.container-pdf,img,figure{
+        display: none;
+    }
+    .watermark{
+        width: 100px;
+        height: 2cm;
+        position: fixed;
+        bottom: 0;
+        display: inline-flex;
+        width: fit-content;
+        height: fit-content;
+        right: 0;
+        z-index: 101;
+    }
+    .watermark::after{
+        border: 0.1em black double;
+        opacity: 0.65;
+        content: "Copyright Babii Victor";
+    }
+    @page {
+		size: A4 portrait;
+		margin-bottom:2cm;
+		margin-top:2cm;
+		counter-increment: page;
+			
+	}
+	@page:left{
+
+		margin-left:2.5cm;
+		margin-right:0.5cm;
+		border-radius: 20cm;
+	}
+	@page:right{
+
+		margin-right:2.5cm;
+		margin-left:0.5cm;
+	}
 }
