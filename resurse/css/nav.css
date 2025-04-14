@@ -23,6 +23,7 @@
 }
 
 .menu-bar {
+  top:0;
   background-color: var(--culoare-navbar);
   display: flex;
   align-items: center;

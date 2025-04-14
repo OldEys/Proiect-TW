@@ -1,0 +1,31 @@
+{
+  "name": "proiect",
+  "version": "1.0.0",
+  "description": "WebSite RocketPCs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OldEys/Proiect-TW.git"
+  },
+  "keywords": [
+    "RocketPCs",
+    "calculatoare",
+    "build-uri",
+    "PC",
+    "periferice",
+    "componente"
+  ],
+  "author": "Babii Victor Ionut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OldEys/Proiect-TW/issues"
+  },
+  "homepage": "https://github.com/OldEys/Proiect-TW#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}

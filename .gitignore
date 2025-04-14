@@ -1,0 +1,10 @@
+node_modules
+*.jpg
+*.jpeg
+*.png
+*.webm
+*.webp
+*.mp4
+*.pdf
+*.vtt
+*.avif
