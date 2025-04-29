@@ -1,0 +1,60 @@
+
+.imagine-duotone {
+    position: relative;
+    background-image: url("/resurse/imagini/Duotone.jpeg");
+    background-size: cover;
+    height: 30rem;
+    width: 50%;
+    left: 25%;
+    margin-top: 1rem;
+    filter: brightness(100%) grayscale(0);
+    transition: all 1.5s linear;
+}
+
+.imagine-duotone:after,
+.imagine-duotone:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    transition: all 1.5s linear;
+}
+
+.imagine-duotone:after {
+    background-color: rgb(20, 0, 20);
+    mix-blend-mode: lighten;
+}
+
+.imagine-duotone:before {
+    background-color: rgb(205, 120, 205);
+    mix-blend-mode: darken;
+}
+
+.imagine-duotone:hover {
+    filter: brightness(200%) grayscale(100%);
+}
+
+.imagine-duotone:hover:before {
+    filter: brightness(200%) grayscale(100%);
+}
+
+.imagine-duotone:hover:after {
+    filter: brightness(200%) grayscale(100%);
+}
+.benchmark-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; margin: 1%;
+}
+.benchmark-image img{
+    border: 0.2em var(--culoare-detalii) solid;
+    border: 2px var(--culoare-detalii) solid;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    /* box-shadow: 0 0.5em 0.7em 0.3em var(--culoare-negru) ; */
+    /* box-shadow: 0 0.5em 0.7em 0.3em red ; */
+}

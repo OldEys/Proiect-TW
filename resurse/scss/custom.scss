@@ -1,0 +1,36 @@
+$headings-font-size: (
+        1: 2.5rem,
+        2: 2rem,
+        3: 1.75rem,
+        4: 1.5rem,
+        5: 1.25rem,
+        6: 1rem
+    );
+@use "../../node_modules/bootstrap/scss/bootstrap.scss" as bs with 
+(
+    $primary: #1B2638,
+    $secondary: #6D50C7,
+
+    $body-color: white,
+
+    $body-bg: #1B2638,
+
+    $font-family-base: "Nunito Sans",
+
+    $border-radius: 0.4rem,
+
+    $grid-breakpoints: (
+        sm: 480px,
+        md: 768px,  
+        lg: 1024px, 
+        xl: 1400px
+    ),
+    $btn-padding-y: .75rem,
+    $btn-padding-x: 1.5rem,
+    $link-color:#0d6efd,
+    $box-shadow: 0 0.5em 0.7em 0.3em red
+);
+.btn-secondary{
+    color:white;
+}
+

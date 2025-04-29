@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <title>RocketPCs - GaleriePC</title>
+    <%- include("../fragmente/head.ejs") %>
+    <link rel="stylesheet" href="/resurse/css/galerie.css">
+    <link rel="stylesheet" href="/resurse/css/galerie_dinamica.css">
+</head>
+<body>
+    <%- include("../fragmente/header.ejs") %>
+    <main>
+
+        <h2>Galerie PC</h2>
+        <p>
+            Bine ați venit la secțiunea de <b>Galerie</b>. Aici veți găsi o
+            <u>galerie-statică</u> cu cele mai recomandate produse ale noastre. Aceste
+            produse au avut un succes foarte mare în ultimele luni așadar credem că
+            v-ar putea interesa. Desigur , acestea sunt unele dintre cele mai
+    impresionante build-uri realizate de noi deci nu ezitați să aruncați o
+    privire asupra lor.
+    </p>
+    
+    <%- include("../fragmente/galerie.ejs") %>
+    
+    <h3>Galerie animată</h3>
+    <p>De asemenea, puteți vizualiza o formă animată a galeriei statice,
+        care oferă tranziții dinamice între imagini pentru un efect
+        vizual mai captivant ! 
+    </p>
+    <div class="galerie-animata">
+        <div class="grid-dinamica">
+            <% for(let imag of locals.imaginiDinamice)
+            { %>
+            <figure>
+            <picture>
+                <source srcset="<%- imag.cale_imagine_mediu%>" media="screen and (max-width:1024px)">
+                <img src="<%- imag.cale_imagine %>" alt="<%- imag.titlu %>" />
+                </picture>
+                <figcaption title="<%- imag.descriere %>"><%- imag.titlu%></figcaption>
+          </figure>
+          <%}%>  
+        </div>
+    </div>
+
+</main>
+    <%- include("../fragmente/footer.ejs") %>
+</body>
+</html>

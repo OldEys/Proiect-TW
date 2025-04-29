@@ -7,6 +7,8 @@
         optiuni in functie de gusturile tale precum si periferice sau componente pentru a-ti construi calculator visurilor tale.">
         <title>RocketPCs</title>
         <%- include("../fragmente/head.ejs") %>
+        <link rel="stylesheet" href="/resurse/css/galerie.css">
+        <link rel="stylesheet" href="/resurse/css/acasa.css">
     </head>
     <body>
         <%- include("../fragmente/header.ejs") %>
@@ -251,11 +253,13 @@
                     </div>
                 </div>
             </div>
+            <hr>
             <section id="Acasa">
-                <h2>
-                    Acasă
-                    <span class="fas fa-regular fa-house"></span>
-                </h2>
+                    <h2>
+                        Acasă
+                        <span class="fas fa-regular fa-house"></span>
+                    </h2>
+                    <button class="btn btn-secondary">text</button>
                 <div>
                     Ip-ul dvs. :<%- locals.ip %>
                 </div>
@@ -286,7 +290,7 @@
                         <b>componente</b>
                         ,fiecare cu descriere și fotografie sugestivă pentru a decide mai ușor ce ți se potrivește . Folosind funcțiile de căutare prin tag-uri , filtrare și ordonare puteți naviga cu ușurință pe această platformă.
                     </p>
-                    <figure>
+                    <figure >
                         <picture>
                             <source srcset="./resurse/imagini/PC_aquiris_medium.jpg" media="(max-width: 768px)">
                             <source srcset="./resurse/imagini/PC_aquiris_large.jpg" media="(max-width: 1024px)">
@@ -299,6 +303,12 @@
                         </picture>
                         <figcaption>Cel mai vândut produs în ultima lună</figcaption>
                     </figure>
+                    <div class="text-stilat">
+                        Ar putea fi al tău ! Nu rata !
+                        <div class="text-reflectat">
+                            Ar putea fi al tău ! Nu rata !
+                        </div>
+                    </div>
                 </section>
                 <section id="Despre_noi">
                     <h3>Despre noi</h3>
@@ -497,11 +507,11 @@
                     </video>
                 </div>
             </section>
+            <section>
+                <%- include("../fragmente/galerie.ejs")%>
+            </section>
         </section>
     </main>
-    <div>
-        <hr>
-    </div>
     <%- include("../fragmente/footer.ejs") %>
 </body>
 </html>

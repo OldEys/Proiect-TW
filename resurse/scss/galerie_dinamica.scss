@@ -1,0 +1,276 @@
+$grid-size: 4 !default;
+
+.galerie-animata {
+    width: 90vw;
+    height: 80vh;
+    margin: 2rem auto;
+    border: 0.5rem solid;
+    border-image: url("/resurse/imagini/imagine_border.jpg") 10 round;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--culoare-navbar);
+}
+
+$gap: 2rem;
+$zoom-scale: $grid-size;
+$timp-animatie:calc(5s*$grid-size*$grid-size);
+.grid-dinamica {
+    animation: zoomGallery $timp-animatie infinite ease-in-out;
+    animation-play-state: running;
+
+    &:hover {
+        animation-play-state: paused;
+    }
+
+    padding-bottom: 2rem;
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    grid-gap: $gap;
+
+    grid-template-columns: repeat($grid-size,
+        calc((100% - (#{$grid-size - 1} * #{$gap})) / #{$grid-size}));
+
+    grid-template-rows: repeat($grid-size,
+        calc((100% - (#{$grid-size - 1} * #{$gap})) / #{$grid-size}));
+
+    box-sizing: border-box;
+
+    figure {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+
+        figcaption {
+            position: relative;
+            bottom: 10px;
+            justify-self: center;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+    }
+}
+
+@if $grid-size==2 {
+    $centruX1: calc((
+        (1 - 0.5) / 2 - 0.25) * 100%); // 0%
+    $centruX2: calc((
+        (2 - 0.5) / 2 + 0.3 ) * 100%); // 105%
+    $centruY1: calc((
+        (1 - 0.5) / 2 - 0.25 ) * 100%); // 0%
+    $centruY2: calc((
+        (2 - 0.5) / 2 + 0.25 ) * 100%); // 100%
+    $centru: 50%;
+
+    @keyframes zoomGallery {
+
+        10%,
+        13% {
+            transform-origin: $centruX2 $centruY1;
+            transform: scale($zoom-scale);
+    }
+
+    23%,
+    25% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+
+    35%,
+    38% {
+        transform-origin: $centruX1 $centruY2;
+        transform: scale($zoom-scale);
+    }
+
+    48%,
+    50% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+    
+    60%,
+    63% {
+        transform-origin: $centruX2 $centruY2;
+        transform: scale($zoom-scale);
+    }
+    73%,
+    75% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+    
+    85%,
+    88% {
+        transform-origin: $centruX1 $centruY1;
+        transform: scale($zoom-scale);
+    }
+
+    98%,
+    100% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+}
+}
+@if $grid-size==3{
+    $centruX1: calc((
+        (1 - 0.33) / 3 - 0.23) * 100%); 
+    $centruX2: calc((
+        (2 - 0.66) / 3 + 0.07 ) * 100%); 
+    $centruX3: calc((
+        (3 - 1) / 3 + 0.37 ) * 100%); 
+    $centruY1: calc((
+        (1 - 0.33) / 3 - 0.23 ) * 100%); 
+    $centruY2: calc((
+        (2 - 0.66) / 3 + 0.07 ) * 100%); 
+    $centruY3: calc((
+        (3 - 1) / 3 + 0.33 ) * 100%); 
+    $centru: 50%;
+
+    @keyframes zoomGallery {
+
+        5%,
+        6% {
+            transform-origin: $centruX1 $centruY1;
+            transform: scale($zoom-scale);
+    }
+
+    11%,
+    12% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+
+    17%,
+    18% {
+        transform-origin: $centruX1 $centruY2;
+        transform: scale($zoom-scale);
+    }
+
+    23%,
+    24% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+    
+    29%,
+    30% {
+        transform-origin: $centruX1 $centruY3;
+        transform: scale($zoom-scale);
+    }
+    35%,
+    36% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+    
+    41%,
+    42% {
+        transform-origin: $centruX2 $centruY1;
+        transform: scale($zoom-scale);
+    }
+
+    47%,
+    48% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+    53%,
+    54% {
+        transform-origin: $centruX2 $centruY2;
+        transform: scale($zoom-scale);
+    }
+    59%,
+    60% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+    64%,
+    65% {
+        transform-origin: $centruX2 $centruY3;
+        transform: scale($zoom-scale);
+    }
+    68%,
+    69% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+    73%,
+    74% {
+        transform-origin: $centruX3 $centruY1;
+        transform: scale($zoom-scale);
+    }
+    79%,
+    80% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+    84%,
+    85% {
+        transform-origin: $centruX3 $centruY2;
+        transform: scale($zoom-scale);
+    }
+    89%,
+    90% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+    94%,
+    95% {
+        transform-origin: $centruX3 $centruY3;
+        transform: scale($zoom-scale);
+    }
+    99%,
+    100% {
+        transform-origin: $centru $centru;
+        transform: scale(1);
+    }
+
+}
+}
+@if $grid-size == 4 {
+    $centruX: (3%, 35%, 70%, 99.5%);
+    $centruY: (1%, 32%, 65%, 98.5%);
+    $centru: 50%;
+  
+    @keyframes zoomGallery {
+      @for $i from 1 through 4 {
+        @for $j from 1 through 4 {
+          $index: (($i - 1) * 4 + $j - 1); // 0-based
+          $startIn: 2.5% + $index * 6%;
+          $endIn: calc($startIn + 0.5%); 
+          $startOut: calc($endIn + 2.5%);
+          $endOut: calc($startOut + 0.5%);
+            
+          #{$startIn}, #{$endIn} {
+            transform-origin: nth($centruX, $i) nth($centruY, $j);
+            transform: scale($zoom-scale);
+          }
+  
+          #{$startOut}, #{$endOut} {
+            transform-origin: $centru $centru;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+  
+@media screen and (max-width:1024px) {
+    .galerie-animata {
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .galerie-animata {
+        display: none;
+    }
+}

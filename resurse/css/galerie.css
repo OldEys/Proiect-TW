@@ -1,0 +1,91 @@
+
+.licenta{
+    line-height: 2rem;
+    font-size: 1.5rem;
+    border: 0.1em solid var(--culoare-detalii);
+    /* border-radius: 0.4rem; */
+    box-shadow: 0 0.5em 0.7em 0.3em var(--culoare-negru);
+    width: fit-content;
+    margin-bottom: 6rem;
+}
+.galerie-statica{
+    padding-left: var(--spatiere-mare);
+    padding-right: var(--spatiere-mare);
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+}
+.grid-galerie{
+    display: grid;
+    grid-template-areas:
+    "imagine1 imagine2 imagine3"
+    "imagine4 . imagine5"
+    "imagine6 . imagine7"
+    "imagine8 imagine9 imagine10";
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1.5rem;
+    counter-reset: nrimag 0;
+}
+.grid-galerie img{
+    width: 100%;
+    height: 90%;
+}
+.grid-galerie figcaption{
+    text-align: center;
+    counter-increment: nrimag 1;
+    position: absolute;
+    padding-bottom:2rem
+}
+.grid-galerie figure{
+    align-items: center;
+    position: relative;
+}
+.grid-galerie figcaption::before{
+    content: counter(nrimag,upper-roman) ")";
+}
+.grid-galerie img:hover{
+    transform: rotate(10deg) scale(1.25);
+    transition: 1.2s all ease-out;
+    border: 4px solid var(--culoare-detalii);
+    border-radius: 0.4rem;
+    box-shadow: 0 0.5em 0.7em 0.3em var(--culoare-negru);
+}
+.grid-galerie figure:nth-child(1){grid-area: imagine1;}
+.grid-galerie figure:nth-child(2){grid-area: imagine2;}
+.grid-galerie figure:nth-child(3){grid-area: imagine3;}
+.grid-galerie figure:nth-child(4){grid-area: imagine4;}
+.grid-galerie figure:nth-child(5){grid-area: imagine5;}
+.grid-galerie figure:nth-child(6){grid-area: imagine6;}
+.grid-galerie figure:nth-child(7){grid-area: imagine7;}
+.grid-galerie figure:nth-child(8){grid-area: imagine8;}
+.grid-galerie figure:nth-child(9){grid-area: imagine9;}
+.grid-galerie figure:nth-child(10){grid-area: imagine10;}
+
+@media screen and (max-width:1024px) {
+    .grid-galerie{
+        grid-template-areas: 
+        "imagine1 imagine2"
+        "imagine3 imagine4"
+        "imagine5 imagine6"
+        "imagine7 imagine8"
+        "imagine9 imagine10"
+        "imagine11 imagine12";
+        grid-column-gap: 3.5rem;
+    }
+    .galerie-statica{
+        margin-left: 4.5rem;
+        margin-right: 4.5rem;
+    }
+
+    
+}
+@media screen and (max-width:768px) {
+    .grid-galerie{
+        display: block;
+    }
+    .galerie-statica{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}

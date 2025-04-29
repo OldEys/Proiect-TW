@@ -1,0 +1,30 @@
+<h3>Galerie statică</h3>
+<section class="galerie-statica">
+  <div class="licenta rounded-4">
+    Licență imagini galerie: <br>
+    Tip licență :<%-  locals.licenta_galerie.tip %> <br>
+    Autor : <%- locals.licenta_galerie.autor %> <br>
+    Linkul către sursă <a href="<%- locals.licenta_galerie.link %>" target="_blank">aici</a> <br>
+  </div>
+    <div class="grid-galerie">
+    <% vect_minute=["1","2","3","4"]
+    d=new Date()
+    let contor=0
+    timpul_curent=vect_minute[Math.floor(d.getMinutes()/15)]
+    for(let imag of locals.imagini){ %> 
+        <% if(imag.sfert_ora && imag.sfert_ora.includes(timpul_curent)){
+          if(contor>=10) 
+          break 
+          contor++ 
+          let altText=imag.alt ? imag.alt : imag.titlu
+          %>
+          <figure>
+            <picture>
+              <source srcset="<%- imag.cale_imagine_mediu%>" media="screen and (max-width:1024px)">
+              <img src="<%- imag.cale_imagine %>" alt="<%- imag.titlu %>" />
+              <figcaption title="<%- imag.descriere %>"><%- imag.titlu%></figcaption>
+              </picture>
+          </figure>
+    <% } %> <% } %>
+  </div>
+</section>

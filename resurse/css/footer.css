@@ -1,0 +1,30 @@
+footer {
+    background-color: var(--culoare-inchisa);
+    padding: var(--spatiere-mare);
+    border: .2em var(--culoare-gri) solid;
+    border-radius: 4%;
+}
+.container-maps {
+    width: 50%;
+    height: 50vh;
+}
+@media screen and (max-width:1024px) {
+    footer {
+        margin-left: var(--spatiere-medie);
+        margin-right: var(--spatiere-medie);
+        padding: var(--spatiere-medie);
+    }
+    .container-maps{
+        width: 75%;
+    }
+}
+@media screen and (max-width:1024px) {
+    footer {
+        margin-left: var(--spatiere-mica);
+        margin-right: var(--spatiere-mica);
+        padding: var(--spatiere-mica);
+    }
+    .container-maps{
+        width: 100%;
+    }
+}

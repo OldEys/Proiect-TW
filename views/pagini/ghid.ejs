@@ -6,6 +6,8 @@
 </head>
 <body>
     <%- include("../fragmente/header.ejs") %>
+    <link rel="stylesheet" href="/resurse/css/ghid.css">
+    <div class="imagine-duotone"></div>
     <main>
     <section id="Ghid">
         <h3>Ghid utilizare site</h3>
@@ -105,12 +107,8 @@
             </li>
         </ul>
     </section>
-    <div style="display: flex; align-items: center; justify-content: center; width: 100%; margin: 1%;">
-        <img src="/resurse/imagini/Benchmark-Testing.webp" alt="Benchmarking" style="border: 0.2em var(--culoare-detalii) solid;
-        border: 2px var(--culoare-detalii) solid;
-        border-top-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        box-shadow: 0 0.5em 0.7em 0.3em var(--culoare-negru) ;">
+    <div class="benchmark-image">
+        <img src="/resurse/imagini/Benchmark-Testing.webp" alt="Benchmarking">
     </div>
 </main>
     <%- include("../fragmente/footer.ejs")%>

@@ -25,7 +25,10 @@
   },
   "homepage": "https://github.com/OldEys/Proiect-TW#readme",
   "dependencies": {
+    "bootstrap": "^5.3.5",
     "ejs": "^3.1.10",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "sass": "^1.87.0",
+    "sharp": "^0.34.1"
   }
 }

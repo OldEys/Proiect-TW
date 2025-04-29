@@ -1,0 +1,152 @@
+{
+    "cale_galerie":"/resurse/imagini/galerie",
+    "imagini":[
+        {
+            "cale_imagine":"PC_galerie_1.webp",
+            "titlu":"PC OZN Advanced Gamer",
+            "descriere":"Intel Core i7-14700KF 32GB DDR5 SSD 1TB M.2 NVMe NVIDIA GeForce RTX 5070 12GB DLSS 4 Wi-Fi BT",
+            "sfert_ora":["1","3"],
+            "alt":"calculator OZN"
+        },
+        {
+            "cale_imagine":"PC_galerie_2.webp",
+            "titlu":"PC Satelit Smart Gamer",
+            "descriere":"AMD Ryzen 5 5600 4.4GHz 32GB DDR4 SSD 1TB M.2 NVMe NVIDIA GeForce RTX 4060 8GB Iluminare ARGB",
+            "sfert_ora":["2","3"],
+            "alt":"calculator Satelit"
+        },
+        {
+            "cale_imagine":"PC_galerie_3.webp",
+            "titlu":"PC Satelit Frosty",
+            "descriere":"Intel Core i5-12400F 16GB DDR4 SSD 1TB M.2 NVMe RTX 4060 Ti 8GB DLSS 3 ARGB",
+            "sfert_ora":["1","2","4"],
+            "alt":"calculator Satelit"
+        },
+        {
+            "cale_imagine":"PC_galerie_4.webp",
+            "titlu":"PC Racheta Ultimate",
+            "descriere":"AMD Ryzen 9 9950X3D 96GB DDR5 SSD 4TB M.2 NVMe NVIDIA GeForce RTX 5090 32GB GDDR7 512-bit DLSS 4 WiFi BT",
+            "sfert_ora":["2","3","4"]
+        },
+        {
+            "cale_imagine":"PC_galerie_5.webp",
+            "titlu":"PC Racheta Impact Gamer",
+            "descriere":"Intel Core i9-14900KF 32GB DDR5 SSD 2TB M.2 NVMe NVIDIA GeForce RTX 5070 Ti 16GB GDDR7 DLSS 4 Wi-Fi BT",
+            "sfert_ora":["1","2","3","4"]
+        },
+        {
+            "cale_imagine":"PC_galerie_6.webp",
+            "titlu":"PC OZN Powered",
+            "descriere":"AMD Ryzen 7 5700X 32GB DDR4 SSD 1TB M.2 NVMe AMD Radeon RX 6600 8GB",
+            "sfert_ora":["2","3","4"],
+            "alt":"calculator OZN"
+
+        },
+        {
+            "cale_imagine":"PC_galerie_7.webp",
+            "titlu":"PC Satelit Smart Choice",
+            "descriere":"AMD Ryzen 5 5500 16GB DDR4 1TB SSD NVIDIA GeForce RTX 3060 12GB",
+            "sfert_ora":["2","4"]
+        },
+        {
+            "cale_imagine":"PC_galerie_8.webp",
+            "titlu":"PC Satelit Wallet Friend",
+            "descriere":"Intel Core i5-12400F 16GB DDR4 SSD 512GB M.2 NVMe NVIDIA GeForce RTX 3050 6GB",
+            "sfert_ora":["1","3"]
+        },
+        {
+            "cale_imagine":"PC_galerie_9.webp",
+            "titlu":"PC Satelit Cheap Cool",
+            "descriere":"AMD Ryzen 7 5700G 32GB DDR4 1TB SSD AMD Radeon R8 Iluminare RGB",
+            "sfert_ora":["1","2","3"]
+        },
+        {
+            "cale_imagine":"PC_galerie_10.webp",
+            "titlu":"PC OZN Quicker",
+            "descriere":"Intel Core i7-12700KF 32GB DDR4 SSD 1TB M.2 NVMe NVIDIA GeForce RTX 4060 8GB GDDR6 DLSS 3",
+            "sfert_ora":["1","3","4"]
+        },
+        {
+            "cale_imagine":"PC_galerie_11.webp",
+            "titlu":"PC OZN Halloween Party",
+            "descriere":"AMD Ryzen 7 9700X 32GB DDR5 SSD 1TB M.2 NVMe NVIDIA GeForce RTX 5070 12GB GDDR7 DLSS 4",
+            "sfert_ora":["1","2","4"]
+        },
+        {
+            "cale_imagine":"PC_galerie_12.webp",
+            "titlu":"PC OZN Engineer",
+            "descriere":"AMD Ryzen 7 5700X 32GB DDR4 SSD 1TB M.2 NVMe NVIDIA RTX 4060 Ti 16GB",
+            "sfert_ora":["1","2","3","4"]
+        },
+        {
+            "cale_imagine":"PC_galerie_13.webp",
+            "titlu":"PC Racheta Impact",
+            "descriere":"AMD Ryzen 7 9800X3D 32GB DDR5 SSD 2TB M.2 NVMe NVIDIA GeForce RTX 5070 Ti 16GB GDDR7 DLSS 4 WiFi BT",
+            "sfert_ora":["1","4"],
+            "alt":"calculator Racheta"
+
+        },
+        {
+            "cale_imagine":"PC_galerie_14.webp",
+            "titlu":"PC Racheta Experienced Gamer",
+            "descriere":"Intel Core i7-14700KF 32GB DDR5 SSD 1TB M.2 NVMe AMD Radeon RX 9070 XT 16GB",
+            "sfert_ora":["1","2","3","4"]
+        },
+        {
+            "cale_imagine":"PC_galerie_15.webp",
+            "titlu":"PC OZN Angel",
+            "descriere":"Intel Core i7-14700KF 16GB DDR5 SSD 1TB M.2 NVMe NVIDIA GeForce RTX 3060 12GB ARGB",
+            "sfert_ora":["1","3","4"],
+            "alt":"calculator OZN"
+
+        },
+        {
+            "cale_imagine":"PC_galerie_16.webp",
+            "titlu":"PC Satelit Light Gamer",
+            "descriere":"AMD Ryzen 5 5600X 16GB DDR4 SSD 512GB M.2 NVMe AMD Radeon RX 6500 XT 4GB GDDR6",
+            "sfert_ora":["1","2","3","4"],
+            "alt":"calculator Satelit"
+
+        },
+        {
+            "cale_imagine":"PC_galerie_17.webp",
+            "titlu":"PC OZN Black Widow",
+            "descriere":"AMD Ryzen 7 7700 32GB DDR5 SSD 1TB M.2 NMVe NVIDIA GeForce RTX 4060 Ti OC 16GB DLSS 3",
+            "sfert_ora":["1","2","4"],
+            "alt":"calculator OZN"
+
+        },
+        {
+            "cale_imagine":"PC_galerie_18.webp",
+            "titlu":"PC Racheta Cold Bite",
+            "descriere":" AMD Ryzen 7 7700X 48GB DDR5 SSD 1TB M.2 NVMe AMD Radeon RX 7900 XT 20GB Wi-Fi BT",
+            "sfert_ora":["2","3","4"],
+            "alt":"calculator Racheta"
+
+        },
+        {
+            "cale_imagine":"PC_galerie_19.webp",
+            "titlu":"PC OZN Glow Master",
+            "descriere":"AMD Ryzen 7 7700 16GB DDR5 SSD 1TB M.2 NVMe AMD Radeon RX 7600 XT 16GB",
+            "sfert_ora":["1","2","3","4"],
+            "alt":"calculator OZN"
+
+        },
+        {
+            "cale_imagine":"PC_galerie_20.webp",
+            "titlu":"PC Racheta Blaze Core",
+            "descriere":"AMD Ryzen 7 5700X 32GB DDR4 SSD 2TB M.2 NVMe NVIDIA GeForce RTX 5070 Ti 16GB GDDR7 256 bit DLSS 4",
+            "sfert_ora":["1","2","3"],
+            "alt":"calculator Racheta"
+
+        }
+    ],
+    "licenta_galerie":
+    {
+        "tip":"CC-BY",
+        "autor":"CEL.ro",
+        "link":"https://www.cel.ro/calculatoare-desktop/"
+    },
+    "alt":"calculator"
+
+}
