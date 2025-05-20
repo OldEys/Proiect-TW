@@ -9,8 +9,9 @@
 <body>
     <%- include("../fragmente/header.ejs") %>
     <main>
-
-        <h2>Galerie PC</h2>
+        <h2 class="h2">
+            Galerie PC
+        </h2>
         <p>
             Bine ați venit la secțiunea de <b>Galerie</b>. Aici veți găsi o
             <u>galerie-statică</u> cu cele mai recomandate produse ale noastre. Aceste
@@ -19,7 +20,6 @@
     impresionante build-uri realizate de noi deci nu ezitați să aruncați o
     privire asupra lor.
     </p>
-    
     <%- include("../fragmente/galerie.ejs") %>
     
     <h3>Galerie animată</h3>
@@ -34,7 +34,7 @@
             <figure>
             <picture>
                 <source srcset="<%- imag.cale_imagine_mediu%>" media="screen and (max-width:1024px)">
-                <img src="<%- imag.cale_imagine %>" alt="<%- imag.titlu %>" />
+                <img src="<%- imag.cale_imagine %>" alt="<%- imag.titlu %>" class="img-fluid" />
                 </picture>
                 <figcaption title="<%- imag.descriere %>"><%- imag.titlu%></figcaption>
           </figure>

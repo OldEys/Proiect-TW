@@ -1,11 +1,11 @@
-<h3>Galerie statică</h3>
+<h3 class="page-header">Galerie statică</h3>
+<div class="licenta rounded-4 ml-3 bg-primary">
+  Licență imagini galerie: <br>
+  Tip licență :<%-  locals.licenta_galerie.tip %> <br>
+  Autor : <%- locals.licenta_galerie.autor %> <br>
+  Linkul către sursă <a href="<%- locals.licenta_galerie.link %>" target="_blank">aici</a> <br>
+</div>
 <section class="galerie-statica">
-  <div class="licenta rounded-4">
-    Licență imagini galerie: <br>
-    Tip licență :<%-  locals.licenta_galerie.tip %> <br>
-    Autor : <%- locals.licenta_galerie.autor %> <br>
-    Linkul către sursă <a href="<%- locals.licenta_galerie.link %>" target="_blank">aici</a> <br>
-  </div>
     <div class="grid-galerie">
     <% vect_minute=["1","2","3","4"]
     d=new Date()

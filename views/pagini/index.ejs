@@ -9,6 +9,7 @@
         <%- include("../fragmente/head.ejs") %>
         <link rel="stylesheet" href="/resurse/css/galerie.css">
         <link rel="stylesheet" href="/resurse/css/acasa.css">
+        <script type="text/javascript" src="/resurse/js/timer.js"></script>
     </head>
     <body>
         <%- include("../fragmente/header.ejs") %>
@@ -259,7 +260,6 @@
                         Acasă
                         <span class="fas fa-regular fa-house"></span>
                     </h2>
-                    <button class="btn btn-secondary">text</button>
                 <div>
                     Ip-ul dvs. :<%- locals.ip %>
                 </div>
@@ -290,6 +290,51 @@
                         <b>componente</b>
                         ,fiecare cu descriere și fotografie sugestivă pentru a decide mai ușor ce ți se potrivește . Folosind funcțiile de căutare prin tag-uri , filtrare și ordonare puteți naviga cu ușurință pe această platformă.
                     </p>
+                    <!-- <div class="oferta">
+                        <h3 style="font-size:1.5rem">Aici puteți urmări ofertele de ultimă oră de la TOATE
+                            produsele dintr-o categorie </h3>
+                            <p style="font-size: 1.3rem;">Ofertă unică la categoria : <%- locals.oferta.categorie.toUpperCase() %> !!
+                            <a style="color:var(--culoare-text); margin-left: 1rem;" class="btn btn-secondary" href="/produse/?categorie=<%- locals.oferta.categorie %>">Mergeți la secțiunea cu produse</a></p>
+                            <p>Urmăriți frecvent site-ul nostru petru a fi la curent atunci când această ofertă se schimbă.</p>
+                            <p>Verificați pagina de produse în caz că această categorie este pe placul dumneavoastră.</p>
+                            <div class="reducere">Reducere de <%- locals.oferta.reducere %> % !!</div>
+                        </div>   -->
+                        <section class="oferta-card">
+                    <div class="oferta-header">
+                        <h2>Oferte de ultimă oră</h2>
+                        <p class="oferta-subtitle">
+                            <% 
+                            const dataFormata = new Date(locals.oferta.data_finalizare).toLocaleString("ro-RO", {
+                                day: "numeric",
+                                month: "long",
+                                year: "numeric",
+                                hour: "2-digit",
+                                minute: "2-digit",
+                                second:"2-digit"
+                            }); 
+                            %>
+                        Profitați de reduceri exclusive pe toată categoria <strong><%- locals.oferta.categorie.toUpperCase() %></strong>!
+                        Oferta expiră la <div id="data-finalizare" data-iso="<%- locals.oferta.data_finalizare%>">
+                            <%- dataFormata %> .
+                        </div>
+                        </p>
+                    </div>
+                    <div class="oferta-body">
+                        <div class="oferta-icon">
+                        <i class="fa-solid fa-tags"></i>
+                        </div>
+                        <div class="oferta-info">
+                        <p style="font-size: 1.1rem;">Reducere de</p>
+                        <div class="reducere-valoare"><%- locals.oferta.reducere %> %</div>
+                    </div>
+                    <div id="timer"></div>
+                </div>
+                    <div class="oferta-footer">
+                        <a href="/produse?categorie=<%- locals.oferta.categorie %>" class="btn-verifica">
+                        Vezi produsele în ofertă <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    </section>
                     <figure >
                         <picture>
                             <source srcset="./resurse/imagini/PC_aquiris_medium.jpg" media="(max-width: 768px)">
@@ -316,7 +361,7 @@
                         Rocket PCs este o companie înființată în 2019 și este unul dintre marile
                         magazine online de electronice și produse IT din România . Având la activ peste
                         2000 de angajați și 30 de magazine în toată țara ,scopul nostru este să ne extidem cât mai mult
-                        astfel încât oamenii să aibă posibilitatea să profite de seriviciile noastre .
+                        astfel încât oamenii să aibă posibilitatea să profite de seriviciile noastre . <br>
                         Ne străduim în permanență să aducem satisfacția fiecărui client în ceea ce privește calitatea produsului,
                         raportul calitate de preț dar și experiența pe care acesta o are în procesul de achiziționare . De asemenea,
                         ne ocupăm în permanență de solicitările clienților în vederea rezolvării nemulțumirilor acestora într-un timp cât mai scurt.

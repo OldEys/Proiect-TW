@@ -1,5 +1,5 @@
 .logo-text {
-    color: var(--culoare-alb);
+    color: var(--culoare-text);
     font-size: 2rem;
 
     span {
@@ -20,8 +20,11 @@
     }
 }
 
-.antet q b {
-    color: var(--culoare-detalii)
+.antet q {
+    font-size: 1rem;
+    b{
+        color: var(--culoare-detalii);
+    }
 }
 
 .menu-bar {
@@ -61,8 +64,8 @@
 
                 a {
                     display: flex;
-                    font-size: 1.2rem;
-                    color: var(--culoare-alb);
+                    font-size: 1.1rem;
+                    color: var(--culoare-text);
                     text-decoration: none;
                     transition: color 0.3s;
 
@@ -104,10 +107,9 @@
                         background-color: var(--culoare-navbar);
                         animation: dropdown 0.5s ease-out;
                         animation-fill-mode: forwards;
-
+                        border: none;
                         ul {
                             display: block;
-                            margin: 1rem;
 
                             li {
                                 display: flex;
@@ -124,8 +126,8 @@
     }
 
     .header-container {
-        width: 35%;
-        padding-top: 1rem;
+        padding-top:1.5rem;
+        width: 45%;
     }
 }
 
@@ -264,9 +266,7 @@ $culoare_gri: gray;
                             padding: 1% 2%;
                             text-align: center;
 
-                            a {
-                                font-size: 1rem;
-                            }
+                            
                         }
                     }
 
@@ -284,8 +284,6 @@ $culoare_gri: gray;
         font-size: 2rem;
     }
 }
-//folosim variabila md creata in custom pe care o inmultim
-//cu 1px pentru a returna un nr de pixeli
 @media screen and (max-width:768px) {
     header {
         width: 100%;
@@ -296,7 +294,6 @@ $culoare_gri: gray;
         cursor: pointer;
         visibility: visible;
         z-index: 10;
-        transform: translateX(1rem);
         transition: 2s ease-in-out;
         @for $i from 1 through 3{
             div:nth-child(#{$i}){
@@ -313,11 +310,10 @@ $culoare_gri: gray;
             opacity: 0.1;
         }
         70%{
-            transform: translateX(1rem);
         }
         100%{
             transform: translateX(0);
-            background-color: var(--culoare-alb) ;
+            background-color: var(--culoare-text) ;
             opacity: 1 ;
         }
     }
@@ -374,7 +370,7 @@ $culoare_gri: gray;
 
                 li {
                     a {
-                        color: var(--culoare-alb);
+                        color: var(--culoare-text);
                         text-decoration: none;
                     }
                 }

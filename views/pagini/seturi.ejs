@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RocketPcs - Seturi</title>
+    <%- include("../fragmente/head.ejs") %>
+    <link rel="stylesheet" href="/resurse/css/seturi.css">
+</head>
+<body>
+    <%- include("../fragmente/header.ejs") %>
+<main>
+    <section class="set-container">
+        
+        <div class="set-grid">
+            <% for (let set of locals.setInfo) { %>
+            <div class="set-box">
+                <div class="set-info">
+                <p><%-set.nume%></p>
+                <p><%-set.descriere%></p>
+            </div>
+            <div class="imag-grid">
+                <% let sumaTot=0
+                    for(let imag of locals.setProd) {
+                    if(imag.id_set==set.id) {
+                        sumaTot+=imag.pret
+                    %>
+                    <a href="/produs/<%-imag.id%>">
+                        <img src="<%- imag.url_imagine %>" alt="<%- imag.nume %>">
+                    </a>
+                <% } }%>
+            </div>
+            <div class="pret-total">
+                <p><strong>Preț total:</strong> <%- parseInt(sumaTot).toFixed(2) %> RON</p>
+            </div>
+            </div>
+            <% } %>
+        </div>
+
+    </section>
+
+</main>
+</body>
+    <%- include("../fragmente/footer.ejs") %>
+</html>

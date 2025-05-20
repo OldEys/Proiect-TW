@@ -1,0 +1,267 @@
+.container-inputuri button .text-icon {
+  display: inline;
+}
+.container-inputuri button svg {
+  display: none;
+}
+
+.container-produse .grid-produse {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}
+.container-produse .grid-produse .produs {
+  position: relative;
+  background-color: var(--culoare-gri);
+  border: 0.3rem solid var(--culoare-detalii);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0 0.6em 0.7em 0.5em var(--culoare-negru);
+  height: auto;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.container-produse .grid-produse .produs .continut-produs {
+  display: flex;
+  line-height: 0.8rem;
+  text-wrap: wrap;
+  height: 95%;
+}
+.container-produse .grid-produse .produs .continut-produs .info-prod {
+  display: flex;
+  flex-direction: column;
+}
+.container-produse .grid-produse .produs .continut-produs .info-prod .specificatii {
+  display: inline-flex;
+  flex-direction: row;
+  background-color: var(--culoare-albastru-intens);
+  border-radius: 5rem;
+  padding: 0.1rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  border: 2px solid var(--culoare-inchisa);
+}
+.container-produse .grid-produse .produs .continut-produs .info-prod figure {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+.container-produse .grid-produse .produs .continut-produs .info-prod figure img {
+  border: 0.2rem solid var(--culoare-detalii);
+  border-radius: 20px;
+  max-width: 90%;
+  max-height: 90%;
+  display: block;
+  object-fit: fill;
+  min-width: 100px;
+  min-height: 100px;
+  width: 100%;
+  height: auto;
+}
+.container-produse .grid-produse .produs .continut-produs p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--culoare-detalii);
+}
+.container-produse .grid-produse .produs .continut-produs p span,
+.container-produse .grid-produse .produs .continut-produs p time {
+  color: var(--culoare-text);
+  font-weight: normal;
+}
+.container-produse .grid-produse .produs .continut-produs .info-prod,
+.container-produse .grid-produse .produs .continut-produs .detalii-prod {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.container-produse .grid-produse .produs .nume {
+  width: 100%;
+  font-size: 1.3rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+.container-produse .grid-produse .produs .butoane-selectare {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.container-produse .grid-produse .produs label {
+  background-color: var(--culoare-albastru-intens);
+  border: 0.2rem solid var(--culoare-inchisa);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.container-produse .grid-produse .produs label input {
+  display: none;
+}
+.container-produse .grid-produse .produs label .selecteaza-box {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.3rem;
+  border-color: black;
+  background-color: var(--culoare-alb);
+  border: 0.1rem solid black;
+  border-radius: 0.3rem;
+}
+.container-produse .grid-produse .produs label input:checked ~ .selecteaza-box {
+  background-color: greenyellow;
+}
+.container-produse .grid-produse .produs label input:checked ~ .selecteaza-box::after {
+  display: block;
+}
+.container-produse .grid-produse .produs label .selecteaza-box::after {
+  content: "";
+  position: relative;
+  display: none;
+  left: 6px;
+  top: 1px;
+  width: 8px;
+  height: 15px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+#niciun-rezultat {
+  font-size: 2.5rem;
+  margin: 0 auto;
+  align-self: center;
+  font-weight: bold;
+  border: 0.1rem solid var(--culoare-detalii);
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.control-pagini {
+  width: 100%;
+  text-align: center;
+}
+.control-pagini button {
+  margin: 0.5rem;
+}
+
+.buton-activ {
+  background-color: var(--culoare-detalii) !important;
+  color: var(--culoare-text);
+}
+
+.produs-activ {
+  border-color: var(--culoare-albastru-intens) !important;
+}
+
+.buton-pin, .buton-sterge-temporar, .buton-sterge-sesiune {
+  padding: 0.3rem;
+  width: 2.5rem;
+  margin: 0.2rem;
+}
+
+.sterge-temporar {
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: var(--culoare-principala);
+  margin: 15% auto;
+  padding: 1rem;
+  border: 0.2rem solid var(--culoare-detalii);
+  width: 80%;
+  animation: slideDown 0.4s ease-out;
+}
+.modal-content h3 {
+  align-self: center;
+}
+.modal-content p {
+  font-size: 0.8rem !important;
+  line-height: 0.5rem !important;
+}
+
+.close {
+  color: var(--culoare-detalii);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--culoare-text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container-inputuri button svg {
+    display: none;
+  }
+  .container-inputuri button .text-icon {
+    display: inline !important;
+  }
+  .container-produse .grid-produse .produs {
+    padding-right: 1rem;
+  }
+  .container-produse .grid-produse .produs .nume {
+    font-size: 1rem;
+  }
+  .container-produse .grid-produse .produs .info-prod {
+    padding-bottom: 1rem !important;
+  }
+  .container-produse .grid-produse .produs .info-prod figure {
+    margin-bottom: 4rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-inputuri button svg {
+    display: inline;
+  }
+  .container-inputuri button .text-icon {
+    display: none !important;
+  }
+  .form-floating {
+    margin-bottom: 0.6rem;
+  }
+  .container-produse .grid-produse .produs {
+    padding-right: 1rem;
+  }
+  .container-produse .grid-produse .produs .nume {
+    font-size: 1rem;
+  }
+  .container-produse .grid-produse .produs .info-prod {
+    padding-bottom: 1rem !important;
+  }
+  .container-produse .grid-produse .produs .info-prod figure {
+    margin-bottom: 4rem !important;
+  }
+  .container-produse .grid-produse .produs .detalii-prod {
+    display: none;
+  }
+  .container-produse .grid-produse .produs label {
+    padding: 0.3rem;
+  }
+}

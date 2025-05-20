@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RocketPCs - Produse</title>
+    <%- include("../fragmente/head.ejs") %>
+    <link rel="stylesheet" href="/resurse/css/produse.css" />
+    <script type="text/javascript" src="/resurse/js/produse.js"></script>
+  </head>
+  <%- include("../fragmente/header.ejs") %>
+  <body>
+    <main>
+      <p>Opțiuni de filtrare</p>
+      <p><%- locals.nume %></p>
+      <div class="container-inputuri row g-3 mt-5">
+        <div class="form-floating mb-3 col-md-6">
+          <textarea
+            class="form-control"
+            id="inp-nume"
+            style="height: auto"
+            rows="1"
+            placeholder="Introduceți numele"
+          ></textarea>
+          <label class="form-label" style="margin-left: 6px" for="inp-nume"
+            >Nume <%- locals.tipProdus %>:
+          </label>
+          <div class="invalid-feedback">Introduceți minim 3 caractere.</div>
+        </div>
+        <div class="form-floating mb-3 col-md-6">
+          <input
+            type="text"
+            class="form-control"
+            id="inp-descriere"
+            placeholder="Cuvinte cheie pentru descriere"
+            style="height: auto"
+          />
+          <label style="margin-left: 7px" for="inp-descriere"
+            >Descriere pentru <%- locals.tipProdus %>:</label
+          >
+          <div class="invalid-feedback">Introduceți minim 3 caractere.</div>
+        </div>
+        <div class="col-md-12">
+          <label for="inp-categorie" class="form-label"
+            >Selectare categorie:
+          </label>
+          <input
+            list="lista-categorii"
+            id="inp-categorie"
+            class="form-select"
+          />
+          <datalist id="lista-categorii">
+            <option id="datalist-toate" value="toate">toate</option>
+            <% for(let opt of locals.optiuniCateg) { %>
+            <option value="<%- opt.unnest%>"><%-opt.unnest%></option>
+            <% } %>
+          </datalist>
+          <div class="invalid-feedback">Introduceți minim 3 caractere.</div>
+        </div>
+        <div class="col-md-6">
+          <label for="inp-brand" class="form-label">Selectare brand: </label>
+          <select id="inp-brand" class="form-select">
+            <option id="sel-toate" selected value="toate">toate</option>
+            <% for (let opt of locals.optiuniBrand) { %>
+            <option value="<%- opt.unnest %>"><%- opt.unnest %></option>
+            <% } %>
+          </select>
+        </div>
+        <div class="col-md-7">
+          <label class="form-label mt-md-2">
+            Căutare <%- locals.tipProdus %> după specificații
+            <select id="inp-spec" multiple size="4" class="form-select">
+              <option selected value="toate">toate</option>
+              <option value="rgb">RGB</option>
+              <option value="wireless">wireless</option>
+              <option value="modern">modern</option>
+              <option value="portabil">portabil</option>
+              <option value="performant">performant</option>
+              <option value="scalabil">scalabil</option>
+              <option value="rezistent">rezistent</option>
+              <option value="culori intense">culori intense</option>
+              <option value="eficient">eficient</option>
+              <option value="viteza">viteza</option>
+              <option value="durabil">durabil</option>
+              <option value="calitate superioara">calitate superioara</option>
+              <option value="accesibil">accesibil</option>
+              <option value="raport calitate/pret">raport calitate/pret</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="col-md-12 gap-3">
+          <label class="form-label"
+            >Range stoc maxim:
+            <span id="info-range">(<%- locals.stocMax %>)</span>
+          </label>
+          <input
+            type="range"
+            id="inp-stoc"
+            value="<%- locals.stocMax %>"
+            min="<%- locals.stocMin %>"
+            max="<%- locals.stocMax %>"
+            step="5"
+            class="form-range"
+          />
+        </div>
+
+        <div class="col-md-3 mt-md-2">
+          <input class="btn-check" type="checkbox" id="inp-data" />
+          <label class="btn btn-outline-secondary" for="inp-data">
+            <span id="info-data"
+              >Produse noi din luna <%- locals.dataCurenta %></span
+            ></label
+          >
+        </div>
+        <div
+          class="col-md-9 btn-group btn-group-toggle mt-md-1"
+          data-bs-toggle="buttons"
+        >
+          <p>
+            <input
+              class="btn-check"
+              id="rad1"
+              name="gr_rad"
+              value="0:<%-parseInt(locals.pretMax/3) %>"
+              type="radio"
+            />
+            <label class="btn btn-outline-secondary" for="rad1"
+              >Preț între 0 și <%-parseInt(locals.pretMax/3) %> RON
+            </label>
+          </p>
+          <p>
+            <input
+              class="btn-check"
+              id="rad2"
+              name="gr_rad"
+              value="<%-parseInt(locals.pretMax/3) %>:<%-parseInt(locals.pretMax/3*2) %>"
+              type="radio"
+            />
+            <label class="btn btn-outline-secondary" for="rad2"
+              >Preț între <%-parseInt(locals.pretMax/3) %> și
+              <%-parseInt(locals.pretMax/3*2) %> RON
+            </label>
+          </p>
+          <p>
+            <input
+              class="btn-check"
+              id="rad3"
+              name="gr_rad"
+              value="<%-parseInt(locals.pretMax/3*2) %>:<%-parseInt(locals.pretMax) %>"
+              type="radio"
+            />
+            <label class="btn btn-outline-secondary" for="rad3"
+              >Preț între <%-parseInt(locals.pretMax/3*2) %> și
+              <%-parseInt(locals.pretMax) %> RON
+            </label>
+          </p>
+          <p>
+            <input
+              class="btn-check"
+              checked
+              id="rad4"
+              name="gr_rad"
+              value="toate"
+              type="radio"
+            />
+            <label class="btn btn-outline-secondary" for="rad4">Toate</label>
+          </p>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label" for="cheie_sortare_1"></label>
+          <select class="form-select" id="cheie_sortare_1">
+            <option selected value="pret">Preț</option>
+            <option value="stoc">Stoc</option>
+            <option value="data_adaugare">Data adăugării</option>
+            <option value="id">Nr. articol</option>
+            <option value="nume">Nume</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label" for="cheie_sortare_2"></label>
+          <select class="form-select" id="cheie_sortare_2">
+            <option value="pret">Preț</option>
+            <option value="stoc">Stoc</option>
+            <option value="data_adaugare">Data adăugării</option>
+            <option value="id">Nr. articol</option>
+            <option selected value="nume">Nume</option>
+          </select>
+        </div>
+        <div class="col-md-3 mt-md-3">
+          <button class="btn btn-secondary" id="sortCrescPret">
+            <div class="text-icon">Sortează crescător</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-sort-up"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.5 12.5a.5.5 0 0 1-1 0V3.707L1.354 4.854a.5.5 0 1 1-.708-.708l2-1.999.007-.007a.5.5 0 0 1 .7.006l2 2a.5.5 0 1 1-.707.708L3.5 3.707zm3.5-9a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="col-md-3 mt-md-3">
+          <button class="btn btn-secondary" id="sortDescrescPret">
+            <div class="text-icon">Sortează descrescător</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-sort-up-alt"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.5 13.5a.5.5 0 0 1-1 0V4.707L1.354 5.854a.5.5 0 1 1-.708-.708l2-1.999.007-.007a.5.5 0 0 1 .7.006l2 2a.5.5 0 1 1-.707.708L3.5 4.707zm4-9.5a.5.5 0 0 1 0-1h1a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h5a.5.5 0 0 1 0 1zM7 12.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="col-md-12 mb-md-2 border p-sm-3">
+          <button class="btn btn-secondary" id="filtrare">
+            <div class="text-icon">Filtrează</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="btn-icon bi bi-funnel-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z"
+              />
+            </svg>
+          </button>
+          <button class="btn btn-secondary" id="resetare">
+            <div class="text-icon">Resetează</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-clockwise"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"
+              />
+              <path
+                d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"
+              />
+            </svg>
+          </button>
+          <button class="btn btn-secondary" id="calculareSuma">
+            <div class="text-icon">Calculează suma produselor selectate</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-plus-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+              />
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        style="text-align: center; font-size: 1.4rem; font-weight: bold"
+        id="rez-count"
+      ></div>
+      <section class="container-produse">
+        <div class="grid-produse">
+          <% for(let prod of locals.produse) { %>
+          <article class="produs" data-id="<%- prod.id %>">
+            <h3 class="nume">
+              Nume:
+              <a href="/produs/<%-prod.id%>"
+                ><span class="val-nume"><%- prod.nume%></span></a
+              >
+            </h3>
+            <div class="continut-produs">
+              <div class="info-prod">
+                <p class="stoc">
+                  Stoc: <span class="val-stoc"><%-prod.stoc%></span>
+                </p>
+                <p class="brand">
+                  Brand: <span class="val-brand"><%-prod.brand%></span>
+                </p>
+                <p>
+                  Specificatii: <% for(let spec of prod.specificatii){ %>
+                  <span class="specificatii">
+                    <span class="val-spec"><%-spec%></span>
+                  </span>
+                  <% } %>
+                </p>
+                <p class="data adaugare">
+                  Data adăugare:
+                  <time class="val-data"> <%- prod.data_formatata%> </time>
+                </p>
+                <p class="editie-limitata">
+                  Editie limitata:
+                  <span class="val-editie"
+                    ><%-prod.editie_limitata?"da":"nu"%></span
+                  >
+                </p>
+                <figure>
+                  <a class="link-modal" href="#">
+                    <img src="<%-prod.url_imagine%>" alt="<%-prod.nume%>"
+                  /></a>
+                </figure>
+                <div class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3><%- prod.nume%></h3>
+                    <% if(locals.oferta && locals.oferta.categorie==prod.categorie_produs){ %>
+                    <p>
+                      Preț:
+                      <span class="modal-pret-redus"
+                      data-redus="<%- locals.oferta && locals.oferta.categorie == prod.categorie_produs ? (prod.pret - prod.pret * locals.oferta.reducere / 100).toFixed(2) : '' %>"
+                      data-vechi="<%- prod.pret %>"
+                      >
+                      </span>
+                      RON
+                    </p>
+                    <% } else { %>
+                    <p class="modal-pret">
+                      Preț:
+                      <span class="val-pret"><%-prod.pret%></span>
+                      RON
+                    </p>
+                    <% } %>
+                    <p>
+                      Descriere:
+                      <span class="modal-descriere"><%-prod.descriere%></span>
+                    </p>
+                    <p>
+                      Specificații:
+                      <span class="modal-specificatii"
+                        ><%-prod.specificatii%></span
+                      >
+                    </p>
+                    <p>
+                      Stoc: <span class="modal-stoc"><%-prod.stoc%></span> buc.
+                    </p>
+                    <p>
+                      Brand: <span class="modal-brand"><%-prod.brand%></span>
+                    </p>
+                    <p>
+                      Ediție limită:
+                      <span class="modal-editie_limitata"
+                        ><%-prod.editie_limitata?"da":"nu"%></span
+                      >
+                    </p>
+                    <p>
+                      Data adăugare:
+                      <span class="modal-data_adaugare"
+                        ><%-prod.data_formatata%></span
+                      >
+                    </p>
+                    <p>
+                      Tip produs:
+                      <span class="modal-tip_produs"><%-prod.tip_produs%></span>
+                    </p>
+                    <p>
+                      Categorie produs:
+                      <span class="modal-categorie_produs"
+                        ><%-prod.categorie_produs%></span
+                      >
+                    </p>
+                    <figure>
+                      <img
+                        style="width: 20%; height: auto"
+                        src="<%-prod.url_imagine%>"
+                        alt="<%-prod.nume%>"
+                      />
+                    </figure>
+                  </div>
+                </div>
+              </div>
+              <div class="detalii-prod">
+                <p class="categorie">
+                  Artc-<span class="val-id"><%-prod.id%></span>
+                </p>
+                <p class="categorie">
+                  Categorie:
+                  <span class="val-categorie"><%-prod.categorie_produs%></span>
+                </p>
+                <p class="descriere">
+                  Descriere:
+                  <span class="val-descriere"><%-prod.descriere%></span>
+                </p>
+                <% if(locals.oferta && locals.oferta.categorie==prod.categorie_produs) { %>
+                <p class="pret">
+                  Preț:
+                  <span>
+                    <s class="val-pret-vechi"><%-prod.pret%></s>
+                    <ins class="val-pret"
+                      ><%- (prod.pret - (prod.pret * locals.oferta.reducere /
+                      100)).toFixed(2) %></ins
+                    >
+                  </span>
+                  RON
+                </p>
+                <% } else { %>
+                <p class="pret">
+                  Preț:
+                  <span class="val-pret"><%-prod.pret%></span>
+                  RON
+                </p>
+                <% } %> <% if(prod.pret==pretMin) { %>
+                <p style="color: red">
+                  Cel mai ieftin produs din această categorie !!
+                </p>
+                <% } %>
+              </div>
+            </div>
+            <div class="butoane-selectare">
+              <div style="display: flex">
+                <button class="buton-pin btn btn-outline-secondary mt-sm-2">
+                  <i class="fa-solid fa-map-pin"></i>
+                </button>
+                <button
+                  class="buton-sterge-temporar btn btn-outline-secondary mt-sm-2"
+                >
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <button
+                  class="buton-sterge-sesiune btn btn-outline-secondary mt-sm-2"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+              <label class="mt-sm-2">
+                Selectează : <br />
+                <input
+                  type="checkbox"
+                  value="<%-prod.id%>"
+                  class="select-cos"
+                />
+                <div class="selecteaza-box"></div>
+              </label>
+            </div>
+          </article>
+          <% } %>
+        </div>
+      </section>
+    </main>
+  </body>
+  <%- include("../fragmente/footer.ejs") %>
+</html>

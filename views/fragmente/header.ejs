@@ -1,208 +1,311 @@
 <header>
-    <p class="watermark"></p>
-    <div class="menu-bar">
-        <div class="header-container">
-            <div class="antet">
-                <div class="logo">
-                    <a href="/index#Acasa">
-                        <img src="/resurse/imagini/Logo_fara_main_page.png" alt="Poza Logo">
-                    </a>
-                    <h1 class="logo-text">
-                        Rocket
-                        <span>PC</span>s.
-                    </h1>
-                </div>
-                <q>
-                    <i>
-                        Noi construim
-                        <b>puterea</b>
-                        . Tu o
-                        <b>controlezi</b>
-                        .
-                    </i>
-                </q>
-            </div>
-            <label for="ch-menu">
-                <div class="hamburger">
-                    <div class="bara-1"></div>
-                    <div class="bara-2"></div>
-                    <div class="bara-3"></div>
-                </div>
-            </label>
+  <p class="watermark"></p>
+  <div class="menu-bar">
+    <div class="header-container">
+      <div class="antet">
+        <div class="logo">
+          <a href="/index#Acasa">
+            <img
+              src="/resurse/imagini/Logo_fara_main_page.png"
+              alt="Poza Logo"
+            />
+          </a>
+          <h1 class="logo-text">
+            Rocket
+            <span>PC</span>s.
+          </h1>
+          <!-- <button style="all:unset; margin-left:1rem; cursor: pointer;" id="theme-toggle">
+                        <i class="fa-solid fa-moon" id="theme-icon" style="font-size: 2rem;"></i>
+                    </button> -->
+                    <i style="font-size:2rem; margin-left:1rem; margin-right:1rem;" id="theme-icon" class="fa fa-moon pl-md-3" ></i>
+          <div class="form-check form-switch d-flex align-items-center gap-2" id="theme-toggle">
+              <input
+              class="form-check-input"
+              type="checkbox"
+              id="temaSwitch"
+              />
+          </div>
         </div>
-        <input type="checkbox" id="ch-menu">
-        <section class="wipe-container">
-            <div class="wipe-1"></div>
-            <div class="wipe-2">
-
-            <nav >
+        <q>
+          <i>
+            Noi construim
+            <b>puterea</b>
+            . Tu o
+            <b>controlezi</b>
+            .
+          </i>
+        </q>
+      </div>
+      <label for="ch-menu">
+        <div class="hamburger">
+          <div class="bara-1"></div>
+          <div class="bara-2"></div>
+          <div class="bara-3"></div>
+        </div>
+      </label>
+    </div>
+    <input type="checkbox" id="ch-menu" />
+    <section class="wipe-container">
+      <div class="wipe-1"></div>
+      <div class="wipe-2">
+        <nav>
+          <ul>
+            <li>
+              <a href="/index#">
+                <div class="imag-icon">
+                  <i class="fas fa-regular fa-house"></i>
+                </div>
+                <div class="text-icon">
+                  <span class="fas fa-regular fa-house"></span>
+                  <div class="container-acasa">
+                    Acasă
+                    <i class="fas fa-caret-down"></i>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-menu">
                 <ul>
-                    <li>
-                        <a href="/index#">
-                            <div class="imag-icon">
-                                <i class="fas fa-regular fa-house"></i>
-                            </div>
-                            <div class="text-icon">
-                                <span class="fas fa-regular fa-house"></span>
-                                <div class="container-acasa">
-                                    Acasă
-                                    <i class="fas fa-caret-down"></i>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li>
-                                    <a href="/index#Introducere">Introducere</a>
-                                </li>
-                                <li>
-                                    <a href="/index#Despre_noi">Despre noi</a>
-                                </li>
-                                <li>
-                                    <a href="/index#FAQ">FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="/index#Termeni">Termeni și condiții</a>
-                                </li>
-                                <li>
-                                    <a href="/index#Tutoriale">Tutoriale și linkuri utile</a>
-                                </li>
-                                <li>
-                                    <a href="/index#Contact">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="ghid">Ghid utilizare site</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="imag-icon">
-                                <i class="fa-solid fa-desktop"></i>
-                            </div>
-                            <div class="text-icon">
-                                Build-uri PC
-                                <i class="fas fa-caret-down"></i>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu">
-                            <ul>
-
-                                <li>
-                                    <a href="galeriePC">Galerie PC</a>
-                                </li>
-                                <li>
-                                    <a href="#">PC gaming</a>
-                                </li>
-                                <li>
-                                    <a href="#">PC office</a>
-                                </li>
-                                <li>
-                                    <a href="#">Server PC</a>
-                                </li>
-                                <li>
-                                    <a href="#">PC all-in-one</a>
-                                </li>
-                                <li>
-                                    <a href="#">PC streaming și randare</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="imag-icon">
-                                <i class="fa-solid fa-keyboard"></i>
-                            </div>
-                            <div class="text-icon">
-                                Periferice și accesorii
-                                <i class="fas fa-caret-down"></i>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        Periferice
-                                        <i class="fas fa-caret-right"></i>
-                                    </a>
-                                    <div class="dropdown-menu-1">
-                                        <ul>
-                                            <li>
-                                                <a href="#">Monitoare</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Mouse-uri</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Tastaturi</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Căști</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Boxe</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Microfoane</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Imprimante</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Accesorii
-                                        <i class="fas fa-caret-right"></i>
-                                    </a>
-                                    <div class="dropdown-menu-1">
-                                        <ul>
-                                            <li>
-                                                <a href="#">Mouse pad-uri</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Stick-uri USB</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Scaune de gaming</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Suport de căști</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="imag-icon">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-                            <div class="text-icon">
-                                Cont
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="imag-icon">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </div>
-                            <div class="text-icon">
-                                Coș curent
-                            </div>
-                        </a>
-                    </li>
+                  <li>
+                    <a href="/index#Introducere">Introducere</a>
+                  </li>
+                  <li>
+                    <a href="/index#Despre_noi">Despre noi</a>
+                  </li>
+                  <li>
+                    <a href="/index#FAQ">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="/index#Termeni">Termeni și condiții</a>
+                  </li>
+                  <li>
+                    <a href="/index#Tutoriale">Tutoriale și linkuri utile</a>
+                  </li>
+                  <li>
+                    <a href="/index#Contact">Contact</a>
+                  </li>
+                  <li>
+                    <a href="/ghid">Ghid utilizare site</a>
+                  </li>
                 </ul>
-
+              </div>
+            </li>
+            <li>
+              <a href="/produse?tip=pc">
+                <div class="imag-icon">
+                  <i class="fa-solid fa-desktop"></i>
+                </div>
+                <div class="text-icon">
+                  Build-uri PC
+                  <i class="fas fa-caret-down"></i>
+                </div>
+              </a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li>
+                    <a href="galeriePC">Galerie PC</a>
+                  </li>
+                  <li>
+                    <a href="/produse?tip=pc">Toate</a>
+                  </li>
+                  <li>
+                    <a href="/produse?tip=pc&categorie=pc_gaming"
+                      >PC gaming</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/produse?tip=pc&categorie=pc_office"
+                      >PC office</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/produse?tip=pc&categorie=pc_server"
+                      >Server PC</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/produse?tip=pc&categorie=pc_all_in_one"
+                      >PC all-in-one</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/seturi"
+                      >Seturi produse</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="/produse?tip=periferic">
+                <div class="imag-icon">
+                  <i class="fa-solid fa-keyboard"></i>
+                </div>
+                <div class="text-icon">
+                  Periferice și accesorii
+                  <i class="fas fa-caret-down"></i>
+                </div>
+              </a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li>
+                    <a href="/produse?tip=periferic">
+                      Periferice
+                      <i class="fas fa-caret-right"></i>
+                    </a>
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li>
+                          <a href="/produse?tip=periferic"
+                            >Toate</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="/produse?tip=periferic&categorie=monitor"
+                            >Monitoare</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="/produse?tip=periferic&categorie=mouse"
+                            >Mouse-uri</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="/produse?tip=periferic&categorie=tastatura"
+                            >Tastaturi</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="/produse?tip=periferic&categorie=casti"
+                            >Căști</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="/produse?tip=periferic&categorie=boxa"
+                            >Boxe</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="/produse?tip=periferic&categorie=microfon"
+                            >Microfoane</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="/produse?tip=accesoriu">
+                      Accesorii
+                      <i class="fas fa-caret-right"></i>
+                    </a>
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li>
+                          <a href="/produse?tip=accesoriu"
+                            >Toate</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="/produse?tip=accesoriu&categorie=mouse_pad"
+                            >Mouse pad-uri</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="/produse?tip=accesoriu&categorie=stick_usb"
+                            >Stick-uri USB</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="/produse?tip=accesoriu&categorie=scaun_gaming"
+                            >Scaune de gaming</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="/produse?tip=hardware">
+                <div class="imag-icon">
+                  <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div class="text-icon">
+                  Hardware
+                  <i class="fas fa-caret-down"></i>
+                </div>
+              </a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li>
+                    <a href="/produse?tip=hardware">Toate</a>
+                  </li>
+                  <li>
+                    <a href="/produse?tip=hardware&categorie=cpu"
+                      >CPU</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/produse?tip=hardware&categorie=ram"
+                      >RAM</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/produse?tip=hardware&categorie=gpu"
+                      >GPU</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/produse?tip=hardware&categorie=stocare"
+                      >Stocare</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/produse?tip=hardware&categorie=sursa"
+                      >Surse</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/produse?tip=hardware&categorie=placa_de_baza"
+                      >Plăci de baza</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">
+                <div class="imag-icon">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="text-icon">Cont</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="imag-icon">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div class="text-icon">Coș curent</div>
+              </a>
+            </li>
+          </ul>
         </nav>
-    </div>
+      </div>
     </section>
-
-    </div>
+  </div>
 </header>

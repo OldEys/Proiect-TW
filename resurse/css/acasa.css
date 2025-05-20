@@ -1,5 +1,3 @@
-
-
 .prezentare {
     width: 100%;
     height: 95vh;
@@ -12,7 +10,121 @@
     background-size: cover;
     grid-area: prezentare;
 }
+.gri{
+    filter: grayscale(100%) brightness(300%);
+}
+.oferta-card {
+  max-width: 480px;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.2);
+  font-family: 'Nunito Sans', sans-serif;
+  background: linear-gradient(135deg, #2c3e50 0%, #4b79a1 100%);
+  color: #f5f5f5;
+}
+.oferta-header {
+  padding: 1.5rem;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+}
 
+.oferta-header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  letter-spacing: 0.05em;
+}
+
+.oferta-subtitle {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.oferta-body {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.oferta-icon {
+  flex: 0 0 4rem;
+  font-size: 3rem;
+  text-align: center;
+  color: #ffd700;
+}
+
+.oferta-info {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+.oferta-info p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.reducere-valoare {
+  margin: 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ff6b6b;
+  text-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.3);
+}
+
+.oferta-footer {
+  padding: 1rem;
+  text-align: center;
+  background: rgba(0,0,0,0.1);
+}
+
+.btn-verifica {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  background: var(--culoare-albastru-intens);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-verifica i {
+  margin-left: 0.5rem;
+}
+
+.btn-verifica:hover {
+  background: var(--culoare-detalii);
+}
+.oferta p{
+    color:var(--culoare-detalii);
+    padding-right: 3rem;
+}
+.reducere{
+    font-size: 1.6rem;
+    color:red;
+    padding: 1.3rem;
+    font-weight: bold;
+    border: 0.2rem var(--culoare-detalii) solid;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom: none;
+    border-right: none;
+    text-align: center;
+    
+}
+#timer{
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1rem;
+    font-weight: bold;
+    background-color: var(--culoare-albastru-intens);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.timer-final{
+    color:red;
+}
 .wrapper {
     display: flex;
     width: 500%;
@@ -23,7 +135,7 @@
 
 .slide {
     flex: 0 0 100vw;
-    height: 100vh;
+    height: 100vh;  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +151,7 @@
     margin-bottom: 1em;
     margin-left: 1rem;
     margin-right: 2em;
-    padding-right: 1.5rem;
+    padding-right: 2rem;
     transition: font-size 0.3s ease-in;
 
 }
@@ -47,7 +159,7 @@
 .slide p {
     font-size: 1.5rem;
     margin-left: 1.5rem;
-    padding-right: 2.5rem;
+    padding-right: 3rem;
     margin-right: 2.5rem;
     transition: font-size 0.3s ease-in;
 
@@ -200,7 +312,7 @@ td:hover {
     width: 25%;
     height: 10vh;
     background-color: var(--culoare-gri);
-    color: var(--culoare-alb);
+    color: var(--culoare-text);
     text-decoration: none;
     border-top-right-radius: 2vh;
     border-bottom-right-radius: 2vh;
@@ -244,7 +356,7 @@ details[open] summary .news-content h3::after {
     padding: 1%;
     box-shadow: 0px 4px 10px var(--culoare-inchisa);
     max-width: 400px;
-    color: var(--culoare-alb);
+    color: var(--culoare-text);
 }
 
 .news-widget h2 {
@@ -356,9 +468,10 @@ math mo {
 	line-height:3rem;
 	font-weight: bold;
 }
-/* .buton-test{
-
-} */
+#Despre_noi p{
+    column-count: 2;
+    column-rule: 0.2rem white solid;
+}
 @media screen and (max-width: 1024px) {
 
     main{
@@ -377,11 +490,15 @@ math mo {
         font-size: 3rem;
         margin-bottom: 0.5em;
         margin-left: 0.5rem;
+        padding-right: 6rem;
+
     }
 
     .slide p {
         font-size: 1.3rem;
         margin-left: 1rem;
+        padding-right: 6rem;
+
     }
 
     #grid-pagina {
@@ -419,6 +536,9 @@ math mo {
         line-height:2rem;
         font-weight: bold;
     }
+    #Despre_noi p{
+        column-count: 1;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -439,11 +559,13 @@ math mo {
         font-size: 2.5rem;
         margin-bottom: 0.5em;
         margin-left: 0.5rem;
+        padding-right: 6rem;
     }
-
+    
     .slide p {
         font-size: 1rem;
         margin-left: 1rem;
+        padding-right: 5rem;
     }
 
     #grid-pagina {
@@ -470,5 +592,8 @@ math mo {
         font-size:1.5rem;
         line-height:1.5rem;
         font-weight: bold;
+    }
+    #Despre_noi p{
+        column-count: 1;
     }
 }

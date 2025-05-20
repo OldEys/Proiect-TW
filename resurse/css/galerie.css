@@ -3,7 +3,6 @@
     line-height: 2rem;
     font-size: 1.5rem;
     border: 0.1em solid var(--culoare-detalii);
-    /* border-radius: 0.4rem; */
     box-shadow: 0 0.5em 0.7em 0.3em var(--culoare-negru);
     width: fit-content;
     margin-bottom: 6rem;
@@ -22,14 +21,18 @@
     "imagine4 . imagine5"
     "imagine6 . imagine7"
     "imagine8 imagine9 imagine10";
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-row-gap: 1rem;
     grid-column-gap: 1.5rem;
     counter-reset: nrimag 0;
 }
 .grid-galerie img{
-    width: 100%;
-    height: 90%;
+    width: 30%;
+    height: auto;
+}
+.grid-galerie picture{
+    width: 30%;
+    height: auto;
 }
 .grid-galerie figcaption{
     text-align: center;

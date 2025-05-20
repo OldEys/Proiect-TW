@@ -97,8 +97,9 @@ video {
     --culoare-principala: #1B2638;
     --culoare-inchisa: #031E1D;
     --culoare-detalii: #6D50C7;
-    --culoare-gri: #2B313B;
+    --culoare-gri: #2F353F;
     --culoare-negru: #141d28;
+    --culoare-text: #fff;
     --culoare-alb: #e9e9e9;
     --culoare-albastru-intens: #0852c9;
     --spatiere-mare: 1.2rem;
@@ -107,15 +108,42 @@ video {
     --font-mare: 1rem;
     --font-mediu: 0.8rem;
     --font-mic: 0.7em;
+    --bs-primary:var(--culoare-principala);
+
+}
+[data-theme="light"]{
+    --culoare-navbar:    #f8f9fa;  
+  --culoare-deschisa:  #e9ecef;  
+  --culoare-principala:#ffffff; 
+  --culoare-inchisa:   #dee2e6; 
+  --culoare-detalii:   #6f42c1;  
+  --culoare-gri:       #adb5bd;  
+  --culoare-negru:     #515559;  
+  --culoare-alb:       #ffffff;  
+  --culoare-albastru-intens: #0d6efd;
+  --culoare-text: #000;
+}
+[data-theme="contrast"]{
+    --culoare-navbar:          #000000;
+  --culoare-deschisa:        #1A1A1A;
+  --culoare-principala:      #121212;
+  --culoare-inchisa:         #0A0A0A;
+    --culoare-detalii:         #FFD700;
+  --culoare-albastru-intens:#00BFFF; 
+
+  --culoare-text:            #FFFFFF; 
+  --culoare-alb:             #F0F0F0; 
+  --culoare-gri:             #4D4D4D; 
+    --culoare-text:#fff;
 }
 body {
     background-color: var(--culoare-principala);
-    color: var(--culoare-alb);
+    color: var(--culoare-text);
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    padding-top: 14vh;
+    padding-top: 12vh;
 }
 h2 {
     font-size: 1.5rem;
@@ -142,11 +170,15 @@ ol {
 p {
     margin: 0.5rem;
 }
-
+p::selection{
+    background-color: var(--culoare-detalii);
+    text-decoration:underline;
+}
 main,
 footer {
     margin-left: var(--spatiere-mare);
     margin-right: var(--spatiere-mare);
+    margin-top:var(--spatiere-mare)
 }
 
 main img,
@@ -170,7 +202,7 @@ a[href^="http"]::before {
 a[href^="http"]:hover::before {
     content: "⮳";
     font-size: 1.5em;
-    color: var(--culoare-alb);
+    color: var(--culoare-text);
 }
 
 main a {
@@ -186,7 +218,7 @@ main a:hover {
 }
 
 main a:active {
-    border: 0.1rem var(--culoare-alb) solid;
+    border: 0.1rem var(--culoare-text) solid;
     color: var(--culoare-detalii);
 }
 #banner {
@@ -328,13 +360,15 @@ hr::before {
     }
 
     .container-maps,
-    .container-iframe,
     .container-pdf,
+    .container-video,
+    .container-iframe,
+    .taburi-iframe,
     img,
-    figure{
-        display: none;
+    figure,
+    iframe {
+        display: none !important;
     }
-
     .watermark {
         width: 100px;
         height: 2cm;
